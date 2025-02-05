@@ -3698,7 +3698,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
+		(property "Footprint" "Custom_Library:LCD_I2C"
 			(at 204.47 156.21 0)
 			(effects
 				(font
