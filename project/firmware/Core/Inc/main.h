@@ -75,6 +75,8 @@ void Error_Handler(void);
 #define SWCLK_GPIO_Port GPIOA
 #define VCP_RX_Pin GPIO_PIN_15
 #define VCP_RX_GPIO_Port GPIOA
+#define LED_GREEN_Pin GPIO_PIN_3
+#define LED_GREEN_GPIO_Port GPIOB
 #define MAX_SPI_MOSI_Pin GPIO_PIN_5
 #define MAX_SPI_MOSI_GPIO_Port GPIOB
 
