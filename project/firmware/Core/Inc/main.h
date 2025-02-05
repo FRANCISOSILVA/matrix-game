@@ -63,6 +63,8 @@ void Error_Handler(void);
 #define LCD_I2C_SCL_GPIO_Port GPIOF
 #define VCP_TX_Pin GPIO_PIN_2
 #define VCP_TX_GPIO_Port GPIOA
+#define BUZZER_Pin GPIO_PIN_4
+#define BUZZER_GPIO_Port GPIOA
 #define MAX_SPI_SCK_Pin GPIO_PIN_5
 #define MAX_SPI_SCK_GPIO_Port GPIOA
 #define MAX_SPI_CS_Pin GPIO_PIN_11
