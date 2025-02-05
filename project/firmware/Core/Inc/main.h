@@ -63,6 +63,10 @@ void Error_Handler(void);
 #define LCD_I2C_SCL_GPIO_Port GPIOF
 #define VCP_TX_Pin GPIO_PIN_2
 #define VCP_TX_GPIO_Port GPIOA
+#define MAX_SPI_SCK_Pin GPIO_PIN_5
+#define MAX_SPI_SCK_GPIO_Port GPIOA
+#define MAX_SPI_CS_Pin GPIO_PIN_11
+#define MAX_SPI_CS_GPIO_Port GPIOA
 #define LCD_I2C_SDA_Pin GPIO_PIN_12
 #define LCD_I2C_SDA_GPIO_Port GPIOA
 #define SWDIO_Pin GPIO_PIN_13
@@ -71,6 +75,8 @@ void Error_Handler(void);
 #define SWCLK_GPIO_Port GPIOA
 #define VCP_RX_Pin GPIO_PIN_15
 #define VCP_RX_GPIO_Port GPIOA
+#define MAX_SPI_MOSI_Pin GPIO_PIN_5
+#define MAX_SPI_MOSI_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
