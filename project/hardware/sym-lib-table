@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "nucleo")(type "KiCad")(uri "${KIPRJMOD}/libs/NUCLEO_F042K6/NUCLEO-F042K6.kicad_sym")(options "")(descr ""))
   (lib (name "matrix_led")(type "KiCad")(uri "${KIPRJMOD}/libs/TA23-11EWA/TA23-11EWA.kicad_sym")(options "")(descr ""))
+  (lib (name "Custom_Library")(type "KiCad")(uri "${KIPRJMOD}/libs/Custom/Custom_Library.kicad_sym")(options "")(descr ""))
 )
