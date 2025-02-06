@@ -5,6 +5,108 @@
 	(uuid "84955768-42fa-4149-b8df-35c5d6dc27b9")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Connector:TestPoint"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.762) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Custom_Library:LCD_I2C"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2549,14 +2651,116 @@
 		)
 	)
 	(junction
+		(at 205.74 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "015ee6b7-8787-48c7-93ee-931d7ff530f1")
+	)
+	(junction
+		(at 201.93 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "17dd32bd-62f2-4e97-a7e9-4ca912cac5f6")
+	)
+	(junction
+		(at 213.36 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "381f896d-016e-4902-84e3-8345f278bb4d")
+	)
+	(junction
 		(at 130.81 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "454ff92d-ec01-4977-a2ac-3de8f80a7686")
 	)
+	(junction
+		(at 172.72 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5679a3c5-e195-4c04-818d-70307bf03062")
+	)
+	(junction
+		(at 224.79 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "57a2a005-1276-45d0-85dc-0cbf259124c7")
+	)
+	(junction
+		(at 209.55 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "67c89b33-f273-4b24-95fe-6f7cfa0f6b90")
+	)
+	(junction
+		(at 228.6 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "69d7c1e0-95fe-48ba-be55-cfff2362f474")
+	)
+	(junction
+		(at 224.79 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6e96e7f0-6ff5-43ea-9af5-3a98e4c74294")
+	)
+	(junction
+		(at 217.17 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8f9416dc-4970-4319-923d-865529ea5f65")
+	)
+	(junction
+		(at 220.98 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "901d5216-df18-485e-b6ac-3798a5ef68d1")
+	)
+	(junction
+		(at 217.17 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "94635aaa-0f86-4bca-b6d4-93119729a3bf")
+	)
+	(junction
+		(at 205.74 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9936b156-534e-4b99-a3bb-15b2d41465b9")
+	)
+	(junction
+		(at 228.6 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9f7a317b-14aa-405f-ba4a-4eacbcb8fb9d")
+	)
+	(junction
+		(at 201.93 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c3c93807-f8b7-48fc-beea-389f8c735f33")
+	)
+	(junction
+		(at 220.98 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dbed611b-c9c8-438e-8965-b3432c45e4f0")
+	)
+	(junction
+		(at 213.36 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e0763069-6249-47a7-9c95-4a3307442c73")
+	)
+	(junction
+		(at 209.55 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eccf924e-fb57-441b-8296-769bcc8222b3")
+	)
 	(wire
 		(pts
-			(xy 199.39 71.12) (xy 256.54 71.12)
+			(xy 199.39 71.12) (xy 224.79 71.12)
 		)
 		(stroke
 			(width 0)
@@ -2576,6 +2780,26 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 71.12) (xy 224.79 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0324c7e2-7338-4bf8-9ddd-0a306cd5ee30")
+	)
+	(wire
+		(pts
+			(xy 262.89 53.34) (xy 261.62 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "038fd4f4-de92-4dbe-a06d-0799e71b89d9")
+	)
+	(wire
+		(pts
 			(xy 130.81 118.11) (xy 130.81 120.65)
 		)
 		(stroke
@@ -2583,6 +2807,16 @@
 			(type default)
 		)
 		(uuid "0a2bc3e2-834f-4d29-8acf-57d57ac581e6")
+	)
+	(wire
+		(pts
+			(xy 201.93 55.88) (xy 232.41 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0aed7dd9-1131-433f-8217-3c7051be462a")
 	)
 	(wire
 		(pts
@@ -2596,7 +2830,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 45.72) (xy 220.98 45.72)
+			(xy 199.39 45.72) (xy 217.17 45.72)
 		)
 		(stroke
 			(width 0)
@@ -2633,6 +2867,16 @@
 			(type default)
 		)
 		(uuid "1655a29c-4501-43aa-b6d3-7c337cbac0fb")
+	)
+	(wire
+		(pts
+			(xy 228.6 31.75) (xy 228.6 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16dfb047-ed13-4742-807c-5909cbbe0964")
 	)
 	(wire
 		(pts
@@ -2676,7 +2920,17 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 43.18) (xy 220.98 43.18)
+			(xy 213.36 31.75) (xy 213.36 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ee01954-8e49-4485-94f6-455a2969413e")
+	)
+	(wire
+		(pts
+			(xy 199.39 43.18) (xy 213.36 43.18)
 		)
 		(stroke
 			(width 0)
@@ -2706,6 +2960,16 @@
 	)
 	(wire
 		(pts
+			(xy 213.36 63.5) (xy 273.05 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27c53ca1-51a8-4cf1-bd5a-1dbde6dbef08")
+	)
+	(wire
+		(pts
 			(xy 73.66 119.38) (xy 69.85 119.38)
 		)
 		(stroke
@@ -2716,7 +2980,17 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 35.56) (xy 220.98 35.56)
+			(xy 205.74 58.42) (xy 205.74 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33f83bee-8f5b-4a61-a578-c42392e3b8e2")
+	)
+	(wire
+		(pts
+			(xy 199.39 35.56) (xy 201.93 35.56)
 		)
 		(stroke
 			(width 0)
@@ -2733,6 +3007,16 @@
 			(type default)
 		)
 		(uuid "3977d838-08dc-4d39-b39e-2a3c7675c531")
+	)
+	(wire
+		(pts
+			(xy 209.55 60.96) (xy 275.59 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39f8c9df-28be-420e-aeff-923847896174")
 	)
 	(wire
 		(pts
@@ -2756,6 +3040,16 @@
 	)
 	(wire
 		(pts
+			(xy 213.36 43.18) (xy 231.14 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d3c63a5-b66f-46ae-9b78-5f14124a6c04")
+	)
+	(wire
+		(pts
 			(xy 170.18 76.2) (xy 170.18 130.81)
 		)
 		(stroke
@@ -2763,6 +3057,16 @@
 			(type default)
 		)
 		(uuid "3d4cb0c7-4ff8-4444-97d1-fc34f491f04c")
+	)
+	(wire
+		(pts
+			(xy 220.98 68.58) (xy 199.39 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "401796cc-abc7-45e1-b289-26402b4ab336")
 	)
 	(wire
 		(pts
@@ -2776,7 +3080,7 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 40.64) (xy 266.7 40.64)
+			(xy 261.62 40.64) (xy 275.59 40.64)
 		)
 		(stroke
 			(width 0)
@@ -2806,7 +3110,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 50.8) (xy 220.98 50.8)
+			(xy 199.39 50.8) (xy 224.79 50.8)
 		)
 		(stroke
 			(width 0)
@@ -2833,6 +3137,16 @@
 			(type default)
 		)
 		(uuid "545ada6d-bdfb-4630-a098-d0e33f85b0a2")
+	)
+	(wire
+		(pts
+			(xy 213.36 63.5) (xy 213.36 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5766b10a-1b2e-4bfe-8751-07472d2540c3")
 	)
 	(wire
 		(pts
@@ -2876,7 +3190,17 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 40.64) (xy 220.98 40.64)
+			(xy 228.6 53.34) (xy 231.14 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "642fd2ab-eb0d-4301-b844-aa6eec2c8cc2")
+	)
+	(wire
+		(pts
+			(xy 199.39 40.64) (xy 209.55 40.64)
 		)
 		(stroke
 			(width 0)
@@ -2896,13 +3220,23 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 50.8) (xy 256.54 50.8)
+			(xy 261.62 50.8) (xy 265.43 50.8)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "6563d27e-33c0-4559-8f8e-c2dc8ca3613d")
+	)
+	(wire
+		(pts
+			(xy 217.17 45.72) (xy 231.14 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "676301b2-9d8a-4654-ad72-ecd6fc432598")
 	)
 	(wire
 		(pts
@@ -2936,13 +3270,23 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 76.2) (xy 271.78 35.56)
+			(xy 280.67 76.2) (xy 280.67 35.56)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "6e5e582b-20ed-44c8-a565-20af778d4850")
+	)
+	(wire
+		(pts
+			(xy 224.79 34.29) (xy 224.79 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ed16c80-3b8a-4b54-8285-cd93c21a0588")
 	)
 	(wire
 		(pts
@@ -2956,7 +3300,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 48.26) (xy 259.08 68.58)
+			(xy 267.97 48.26) (xy 267.97 68.58)
 		)
 		(stroke
 			(width 0)
@@ -2976,6 +3320,26 @@
 	)
 	(wire
 		(pts
+			(xy 205.74 58.42) (xy 278.13 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70ad40d3-728f-421d-ab0b-2c52fb36a9b2")
+	)
+	(wire
+		(pts
+			(xy 209.55 40.64) (xy 231.14 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72f868a9-c5d0-477c-bafb-f50995d7de50")
+	)
+	(wire
+		(pts
 			(xy 170.18 130.81) (xy 104.14 130.81)
 		)
 		(stroke
@@ -2986,7 +3350,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 55.88) (xy 217.17 55.88)
+			(xy 199.39 55.88) (xy 201.93 55.88)
 		)
 		(stroke
 			(width 0)
@@ -3026,7 +3390,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 55.88) (xy 217.17 76.2)
+			(xy 232.41 55.88) (xy 232.41 76.2)
 		)
 		(stroke
 			(width 0)
@@ -3046,7 +3410,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 68.58) (xy 199.39 68.58)
+			(xy 267.97 68.58) (xy 220.98 68.58)
 		)
 		(stroke
 			(width 0)
@@ -3056,7 +3420,7 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 43.18) (xy 264.16 63.5)
+			(xy 273.05 43.18) (xy 273.05 63.5)
 		)
 		(stroke
 			(width 0)
@@ -3066,7 +3430,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 76.2) (xy 271.78 76.2)
+			(xy 232.41 76.2) (xy 280.67 76.2)
 		)
 		(stroke
 			(width 0)
@@ -3083,6 +3447,26 @@
 			(type default)
 		)
 		(uuid "8af31508-98ac-4ac7-8ea6-4e2129d57159")
+	)
+	(wire
+		(pts
+			(xy 220.98 48.26) (xy 231.14 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8be4f4ad-a582-4277-b568-fa63c1ffac16")
+	)
+	(wire
+		(pts
+			(xy 228.6 73.66) (xy 228.6 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e00a82c-7dfa-42e3-8788-3979880091d9")
 	)
 	(wire
 		(pts
@@ -3106,7 +3490,7 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 43.18) (xy 264.16 43.18)
+			(xy 261.62 43.18) (xy 273.05 43.18)
 		)
 		(stroke
 			(width 0)
@@ -3126,13 +3510,43 @@
 	)
 	(wire
 		(pts
-			(xy 261.62 66.04) (xy 261.62 45.72)
+			(xy 220.98 68.58) (xy 220.98 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99438826-7c0c-4d89-b3db-012b23841e43")
+	)
+	(wire
+		(pts
+			(xy 270.51 66.04) (xy 270.51 45.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "9bf4d311-5f4f-4177-8d3c-17b26c165ef9")
+	)
+	(wire
+		(pts
+			(xy 220.98 31.75) (xy 220.98 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9db8c186-7ce8-4227-b9b8-73c8d59f917f")
+	)
+	(wire
+		(pts
+			(xy 209.55 60.96) (xy 209.55 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9df3b50a-5334-4d25-8612-f51434988820")
 	)
 	(wire
 		(pts
@@ -3156,7 +3570,17 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 48.26) (xy 259.08 48.26)
+			(xy 209.55 34.29) (xy 209.55 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7372c94-031d-4e25-97f5-84a41ada1a6f")
+	)
+	(wire
+		(pts
+			(xy 261.62 48.26) (xy 267.97 48.26)
 		)
 		(stroke
 			(width 0)
@@ -3166,7 +3590,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 60.96) (xy 266.7 60.96)
+			(xy 199.39 60.96) (xy 209.55 60.96)
 		)
 		(stroke
 			(width 0)
@@ -3176,7 +3600,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 63.5) (xy 264.16 63.5)
+			(xy 199.39 63.5) (xy 213.36 63.5)
 		)
 		(stroke
 			(width 0)
@@ -3186,13 +3610,33 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 58.42) (xy 269.24 58.42)
+			(xy 199.39 58.42) (xy 205.74 58.42)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "a9c96a60-4137-4097-806a-279bd37ae2db")
+	)
+	(wire
+		(pts
+			(xy 201.93 34.29) (xy 201.93 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac5d72cf-b308-48de-b9ba-cc9c8acc2664")
+	)
+	(wire
+		(pts
+			(xy 205.74 38.1) (xy 231.14 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac62ebfc-8971-4af7-a0c5-aae6463fa891")
 	)
 	(wire
 		(pts
@@ -3266,7 +3710,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 60.96) (xy 266.7 40.64)
+			(xy 275.59 60.96) (xy 275.59 40.64)
 		)
 		(stroke
 			(width 0)
@@ -3296,7 +3740,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 73.66) (xy 199.39 73.66)
+			(xy 262.89 73.66) (xy 228.6 73.66)
 		)
 		(stroke
 			(width 0)
@@ -3313,6 +3757,36 @@
 			(type default)
 		)
 		(uuid "c504e9f1-1130-4aae-8e67-c0abd330f026")
+	)
+	(wire
+		(pts
+			(xy 224.79 71.12) (xy 265.43 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c67c1fe9-5743-40c3-be30-3fb11af8b981")
+	)
+	(wire
+		(pts
+			(xy 217.17 66.04) (xy 270.51 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce6f22c4-8019-468e-a7f1-f950affefde4")
+	)
+	(wire
+		(pts
+			(xy 201.93 55.88) (xy 201.93 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce737095-fa33-41da-bbdf-35d18b4316d5")
 	)
 	(wire
 		(pts
@@ -3336,7 +3810,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 38.1) (xy 220.98 38.1)
+			(xy 199.39 38.1) (xy 205.74 38.1)
 		)
 		(stroke
 			(width 0)
@@ -3346,7 +3820,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 53.34) (xy 254 73.66)
+			(xy 262.89 53.34) (xy 262.89 73.66)
 		)
 		(stroke
 			(width 0)
@@ -3356,7 +3830,7 @@
 	)
 	(wire
 		(pts
-			(xy 256.54 71.12) (xy 256.54 50.8)
+			(xy 265.43 71.12) (xy 265.43 50.8)
 		)
 		(stroke
 			(width 0)
@@ -3406,6 +3880,26 @@
 	)
 	(wire
 		(pts
+			(xy 228.6 73.66) (xy 199.39 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de934677-e657-41fc-ba8c-075aa28dac01")
+	)
+	(wire
+		(pts
+			(xy 172.72 34.29) (xy 172.72 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "def09cee-68ff-44d7-9176-d1af66bf8eda")
+	)
+	(wire
+		(pts
 			(xy 149.86 78.74) (xy 152.4 78.74)
 		)
 		(stroke
@@ -3416,7 +3910,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 35.56) (xy 251.46 35.56)
+			(xy 280.67 35.56) (xy 261.62 35.56)
 		)
 		(stroke
 			(width 0)
@@ -3426,13 +3920,13 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 53.34) (xy 254 53.34)
+			(xy 224.79 50.8) (xy 231.14 50.8)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e5b73dcc-5f22-4bd1-b28b-e4159d8a1b0f")
+		(uuid "e69eea09-598e-42fc-8e35-cd9899aeb4fb")
 	)
 	(wire
 		(pts
@@ -3446,7 +3940,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 53.34) (xy 220.98 53.34)
+			(xy 199.39 53.34) (xy 228.6 53.34)
 		)
 		(stroke
 			(width 0)
@@ -3486,13 +3980,23 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 45.72) (xy 261.62 45.72)
+			(xy 261.62 45.72) (xy 270.51 45.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "ee881e0d-0516-4492-a2fa-4f04ae125644")
+	)
+	(wire
+		(pts
+			(xy 205.74 31.75) (xy 205.74 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef59a2bb-6d87-4079-a3f4-15fdab5b285d")
 	)
 	(wire
 		(pts
@@ -3516,6 +4020,16 @@
 	)
 	(wire
 		(pts
+			(xy 217.17 34.29) (xy 217.17 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2a1f36b-8240-4920-a0b2-6d3cfbbb224f")
+	)
+	(wire
+		(pts
 			(xy 167.64 93.98) (xy 149.86 93.98)
 		)
 		(stroke
@@ -3526,7 +4040,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 66.04) (xy 261.62 66.04)
+			(xy 199.39 66.04) (xy 217.17 66.04)
 		)
 		(stroke
 			(width 0)
@@ -3536,7 +4050,7 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 38.1) (xy 269.24 38.1)
+			(xy 261.62 38.1) (xy 278.13 38.1)
 		)
 		(stroke
 			(width 0)
@@ -3556,7 +4070,7 @@
 	)
 	(wire
 		(pts
-			(xy 269.24 38.1) (xy 269.24 58.42)
+			(xy 278.13 38.1) (xy 278.13 58.42)
 		)
 		(stroke
 			(width 0)
@@ -3573,6 +4087,16 @@
 			(type default)
 		)
 		(uuid "f81d9fa7-e487-4067-b2f6-cd87b41a3ca5")
+	)
+	(wire
+		(pts
+			(xy 201.93 35.56) (xy 231.14 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb79e2df-6070-41b9-b2eb-8711404c48ed")
 	)
 	(wire
 		(pts
@@ -3596,6 +4120,16 @@
 	)
 	(wire
 		(pts
+			(xy 217.17 66.04) (xy 217.17 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcd81dfd-bcc3-47b0-92a2-d58b40148f49")
+	)
+	(wire
+		(pts
 			(xy 209.55 138.43) (xy 209.55 146.05)
 		)
 		(stroke
@@ -3603,6 +4137,73 @@
 			(type default)
 		)
 		(uuid "fe547538-074d-4b2a-89fd-deb8a16652b3")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 205.74 31.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0bc300ce-eda6-4802-ba7a-5dc245875ec4")
+		(property "Reference" "TP2"
+			(at 204.216 25.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 195.326 30.226 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 210.82 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 210.82 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 205.74 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "df236ed8-e0f4-44d4-bb85-c3d6e4de9811")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -3665,6 +4266,73 @@
 			(project "matrix-game"
 				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
 					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 201.93 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "157f1845-de1f-4f87-a4c5-cf43a2f0cf2d")
+		(property "Reference" "TP1"
+			(at 200.406 28.448 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 191.516 32.766 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 207.01 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 207.01 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 201.93 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "97e4dc8e-c511-43a4-ae23-ee1953d91ea8")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -3747,6 +4415,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 220.98 31.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "16d567a2-0ff9-4e97-bece-64361f70c8fd")
+		(property "Reference" "TP6"
+			(at 219.456 25.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 210.566 30.226 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 226.06 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 226.06 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 220.98 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "52ffd5f2-0f1f-4e1f-b582-fa8bff402791")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "TP6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 195.58 147.32 0)
 		(unit 1)
@@ -3813,6 +4548,140 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 209.55 77.47 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1efd3ff2-55e1-4337-b3de-f025284170d5")
+		(property "Reference" "TP11"
+			(at 211.836 83.312 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 219.964 78.994 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 204.47 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 204.47 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 209.55 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f32f2e14-9633-4136-804a-ccbd37319792")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "TP11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 209.55 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "200120d5-01f6-49c4-9de8-5fb78f9f071a")
+		(property "Reference" "TP3"
+			(at 208.026 28.448 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 199.136 32.766 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 214.63 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 214.63 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 209.55 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c5687d8f-7219-42e2-8205-c70bb88aa5af")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Driver_LED:MAX7219")
 		(at 189.23 55.88 0)
 		(unit 1)
@@ -3820,10 +4689,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "2507f724-8f10-4676-9b17-a8327aeef547")
 		(property "Reference" "U2"
-			(at 191.4241 27.94 0)
+			(at 179.324 26.162 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3832,7 +4700,7 @@
 			)
 		)
 		(property "Value" "MAX7219"
-			(at 191.4241 30.48 0)
+			(at 179.324 28.702 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3943,6 +4811,73 @@
 			(project ""
 				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 220.98 74.93 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "264216a8-a7ca-450b-b257-5c7ad13225f4")
+		(property "Reference" "TP14"
+			(at 223.52 80.772 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 231.394 76.454 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 215.9 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 215.9 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 220.98 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9ead3ba0-9c2c-4904-9330-a93e46bd67b0")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "TP14")
 					(unit 1)
 				)
 			)
@@ -4077,6 +5012,140 @@
 			(project ""
 				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
 					(reference "SW2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 224.79 77.47 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3136496d-d360-4cd3-909c-e9f750b3ffa7")
+		(property "Reference" "TP15"
+			(at 227.076 83.312 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 235.204 78.994 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 219.71 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 219.71 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 224.79 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ab792cb3-7056-4e9b-b23f-a5bc60696bc9")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "TP15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 205.74 74.93 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "36a3791f-d3d6-440a-adc0-ca26c2e6511d")
+		(property "Reference" "TP10"
+			(at 208.28 80.772 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 216.154 76.454 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 200.66 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 200.66 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 205.74 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3304eca2-86af-4e8d-bb1b-6a4fa838dd12")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "TP10")
 					(unit 1)
 				)
 			)
@@ -4468,6 +5537,140 @@
 			(project ""
 				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 228.6 31.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "56fa8407-1ea7-4e56-9e40-9edd27f3bafd")
+		(property "Reference" "TP8"
+			(at 227.076 25.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 218.186 30.226 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 233.68 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 233.68 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 228.6 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "56bfe444-86c7-480b-8de0-23a8ff38175a")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "TP8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 228.6 74.93 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "588476a6-e561-430c-80a1-57e58d3899bb")
+		(property "Reference" "TP16"
+			(at 231.14 80.772 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 239.014 76.454 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 223.52 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 223.52 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 228.6 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0d830684-d641-468e-9696-c28a1eace268")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "TP16")
 					(unit 1)
 				)
 			)
@@ -5009,7 +6212,7 @@
 	)
 	(symbol
 		(lib_id "matrix_led:TA23-11EWA")
-		(at 236.22 43.18 0)
+		(at 246.38 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5018,7 +6221,7 @@
 		(fields_autoplaced yes)
 		(uuid "a05931e4-70b4-4970-9706-efb123474122")
 		(property "Reference" "D1"
-			(at 236.22 27.94 0)
+			(at 246.38 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5026,7 +6229,7 @@
 			)
 		)
 		(property "Value" "TA23-11EWA"
-			(at 236.22 30.48 0)
+			(at 246.38 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5034,7 +6237,7 @@
 			)
 		)
 		(property "Footprint" "matrix_led:LED_TA23-11EWA"
-			(at 236.22 43.18 0)
+			(at 246.38 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5044,7 +6247,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 236.22 43.18 0)
+			(at 246.38 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5053,7 +6256,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 236.22 43.18 0)
+			(at 246.38 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5062,7 +6265,7 @@
 			)
 		)
 		(property "MF" "Kingbright"
-			(at 236.22 43.18 0)
+			(at 246.38 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5072,7 +6275,7 @@
 			)
 		)
 		(property "MAXIMUM_PACKAGE_HEIGHT" "9.2 mm"
-			(at 236.22 43.18 0)
+			(at 246.38 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5082,7 +6285,7 @@
 			)
 		)
 		(property "Package" "None"
-			(at 236.22 43.18 0)
+			(at 246.38 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5092,7 +6295,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 236.22 43.18 0)
+			(at 246.38 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5102,7 +6305,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/TA2311EWA/Kingbright/view-part/?ref=eda"
-			(at 236.22 43.18 0)
+			(at 246.38 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5112,7 +6315,7 @@
 			)
 		)
 		(property "STANDARD" "Manufacturer Recommendations"
-			(at 236.22 43.18 0)
+			(at 246.38 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5122,7 +6325,7 @@
 			)
 		)
 		(property "PARTREV" "V.10A"
-			(at 236.22 43.18 0)
+			(at 246.38 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5132,7 +6335,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/TA2311EWA/Kingbright/view-part/?ref=snap"
-			(at 236.22 43.18 0)
+			(at 246.38 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5142,7 +6345,7 @@
 			)
 		)
 		(property "SNAPEDA_PACKAGE_ID" "9673"
-			(at 236.22 43.18 0)
+			(at 246.38 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5152,7 +6355,7 @@
 			)
 		)
 		(property "MP" "TA2311EWA"
-			(at 236.22 43.18 0)
+			(at 246.38 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5162,7 +6365,7 @@
 			)
 		)
 		(property "Description_1" "\n                        \n                            DISPLAY, 2.3, 8X8, RED COM.ANODE; LED Colour:Red; Forward Voltage:2V; Luminous Intensity:12mcd; Display Dots x Lines:8 x 8; Display Size:60.8mm x 60.8mm; Peak Wavelength:627nm; Product Range:-; MSL:-; SVHC:No SVHC (15-Jan-2019); LED Display Type:Dot Matrix\n                        \n"
-			(at 236.22 43.18 0)
+			(at 246.38 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5172,7 +6375,7 @@
 			)
 		)
 		(property "Availability" "In Stock"
-			(at 236.22 43.18 0)
+			(at 246.38 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5182,7 +6385,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Kingbright"
-			(at 236.22 43.18 0)
+			(at 246.38 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5243,6 +6446,207 @@
 			(project ""
 				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
 					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 217.17 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a3f6960f-67a8-4abc-ad61-ba87d6ddd9cc")
+		(property "Reference" "TP5"
+			(at 215.646 28.448 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 206.756 32.766 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 222.25 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 222.25 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 217.17 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ef467aa9-8bb5-4891-a407-41273a12f86c")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "TP5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 201.93 77.47 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a963b3c0-d573-40bc-a49e-6eeb8e380920")
+		(property "Reference" "TP9"
+			(at 203.708 83.312 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 212.344 78.994 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 196.85 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 196.85 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 201.93 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5131bb4d-207b-4e0a-b2f3-794a6519f176")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "TP9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 213.36 74.93 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ae9f8ab2-c7b3-40e7-b563-273ac0e0f7a3")
+		(property "Reference" "TP12"
+			(at 215.9 80.772 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 223.774 76.454 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 208.28 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 208.28 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 213.36 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d1995fa9-572a-47c6-a198-7c42b538747d")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "TP12")
 					(unit 1)
 				)
 			)
@@ -5380,6 +6784,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 224.79 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c0d16bb5-8500-4b7f-a4e2-fcaca5112048")
+		(property "Reference" "TP7"
+			(at 223.266 28.448 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 214.376 32.766 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 229.87 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 229.87 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 224.79 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0061b9a9-3cd0-46f9-9c94-3299b53f9eb3")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 172.72 44.45 0)
 		(unit 1)
@@ -5444,6 +6915,73 @@
 			(project ""
 				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
 					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 213.36 31.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cf0e12f9-526e-4e20-acc3-ef316535e4df")
+		(property "Reference" "TP4"
+			(at 211.836 25.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 202.946 30.226 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 218.44 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 218.44 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 213.36 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9c85bfe2-0aba-43bb-984e-d4a2f8461267")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -5582,6 +7120,140 @@
 			(project ""
 				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
 					(reference "BZ1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 217.17 77.47 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dede7608-b9bb-4c53-a031-60dc7e62bb1d")
+		(property "Reference" "TP13"
+			(at 219.456 83.312 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 227.584 78.994 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 212.09 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 212.09 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 217.17 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "05b0bef2-18e2-4f97-a5f3-d89476accfa8")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "TP13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 172.72 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ee6f67e4-5325-42b7-bdae-14eeedae56c7")
+		(property "Reference" "TP17"
+			(at 170.434 28.194 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 162.306 32.766 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 177.8 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 177.8 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 172.72 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "eaa9cc6d-d9c2-4ead-a999-e6a9a1845d6b")
+		)
+		(instances
+			(project ""
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "TP17")
 					(unit 1)
 				)
 			)
