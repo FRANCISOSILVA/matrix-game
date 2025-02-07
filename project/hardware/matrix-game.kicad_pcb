@@ -494,7 +494,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "TP6"
-			(at 0 -2.33 0)
+			(at -0.05 -3.055 90)
 			(layer "F.SilkS")
 			(uuid "e71af593-01e7-4a7f-bb65-79bac9d11d51")
 			(effects
@@ -1699,7 +1699,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "TP1"
-			(at 0 -2.33 0)
+			(at -0.05 -3.055 -90)
 			(layer "F.SilkS")
 			(uuid "a2bd9c41-76c3-497d-a9ec-e376ef361b05")
 			(effects
@@ -2211,7 +2211,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "TP8"
-			(at 0 -2.33 0)
+			(at -0.05 -3.055 90)
 			(layer "F.SilkS")
 			(uuid "f5110fa7-8f94-42ed-b961-3236a8baae77")
 			(effects
@@ -2719,7 +2719,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "TP16"
-			(at 0 -2.33 0)
+			(at -0.345 -3.38 90)
 			(layer "F.SilkS")
 			(uuid "b57d1613-5237-47ef-80b8-95420a5270c4")
 			(effects
@@ -3131,7 +3131,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "TP12"
-			(at 0 -2.33 0)
+			(at -0.345 -3.38 90)
 			(layer "F.SilkS")
 			(uuid "f50a9d70-00ef-4f8c-b091-8a5d3c253967")
 			(effects
@@ -3570,7 +3570,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "TP7"
-			(at 0 -2.33 0)
+			(at -0.05 -3.055 90)
 			(layer "F.SilkS")
 			(uuid "2e4a5e6f-dc4d-4e52-95ef-1419d961808c")
 			(effects
@@ -3826,7 +3826,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "TP15"
-			(at 0 -2.33 0)
+			(at -0.345 -3.38 90)
 			(layer "F.SilkS")
 			(uuid "4af0c154-9628-46d2-8f1c-f6ceaa52d39d")
 			(effects
@@ -4708,7 +4708,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "TP3"
-			(at 0 -2.33 0)
+			(at -0.05 -3.055 90)
 			(layer "F.SilkS")
 			(uuid "066cf570-86ec-4fdb-98f7-6e3c90f5cdba")
 			(effects
@@ -5323,7 +5323,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "TP9"
-			(at 0 -2.33 0)
+			(at -0.315 -2.905 90)
 			(layer "F.SilkS")
 			(uuid "6fcc08d1-1e8d-435d-a9e2-19f98c801a75")
 			(effects
@@ -6127,7 +6127,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "TP13"
-			(at 0 -2.33 0)
+			(at -0.345 -3.38 90)
 			(layer "F.SilkS")
 			(uuid "27f92255-c08b-44b2-8b5e-ee411bf8ed77")
 			(effects
@@ -6383,7 +6383,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "TP11"
-			(at 0 -2.33 0)
+			(at -0.345 -3.38 90)
 			(layer "F.SilkS")
 			(uuid "ef1bec6b-5511-4070-95dc-94ac1b54a878")
 			(effects
@@ -6639,7 +6639,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "TP14"
-			(at 0 -2.33 0)
+			(at -0.345 -3.38 90)
 			(layer "F.SilkS")
 			(uuid "2d6ec0ef-e8b6-4587-a58a-8517626d1b96")
 			(effects
@@ -6895,7 +6895,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "TP4"
-			(at 0 -2.33 0)
+			(at -0.05 -3.055 90)
 			(layer "F.SilkS")
 			(uuid "e744a92b-7b98-481b-a166-20afd041f86b")
 			(effects
@@ -7151,7 +7151,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "TP5"
-			(at 0 -2.33 0)
+			(at -0.05 -3.055 90)
 			(layer "F.SilkS")
 			(uuid "ad2ac507-18bb-4f03-a3e7-790e99553819")
 			(effects
@@ -7407,7 +7407,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "TP10"
-			(at 0 -2.33 0)
+			(at -0.345 -3.38 90)
 			(layer "F.SilkS")
 			(uuid "d4ea1ff1-c516-47fe-9cb2-6913c8d229d0")
 			(effects
@@ -8883,7 +8883,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "TP2"
-			(at 0 -2.33 0)
+			(at -0.05 -3.055 90)
 			(layer "F.SilkS")
 			(uuid "70b99e3f-9536-4ba0-aec4-ff62929d9923")
 			(effects
