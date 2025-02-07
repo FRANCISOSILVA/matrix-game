@@ -400,6 +400,142 @@
 				)
 			)
 		)
+		(symbol "Device:C"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:R"
 			(pin_numbers hide)
 			(pin_names
@@ -3045,6 +3181,16 @@
 	)
 	(wire
 		(pts
+			(xy 157.48 29.21) (xy 157.48 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b934ba3-f9cf-4b17-99db-7fa339e0ba8b")
+	)
+	(wire
+		(pts
 			(xy 172.72 35.56) (xy 172.72 40.64)
 		)
 		(stroke
@@ -3232,6 +3378,16 @@
 			(type default)
 		)
 		(uuid "44e067cf-035d-4393-8aec-6e7689635f00")
+	)
+	(wire
+		(pts
+			(xy 227.33 133.35) (xy 227.33 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "450197cf-2ba0-47f1-a0a5-a749bb89e69e")
 	)
 	(wire
 		(pts
@@ -3545,6 +3701,16 @@
 	)
 	(wire
 		(pts
+			(xy 227.33 143.51) (xy 227.33 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7fb5cef0-181b-4178-9e16-6724430469a5")
+	)
+	(wire
+		(pts
 			(xy 232.41 55.88) (xy 232.41 76.2)
 		)
 		(stroke
@@ -3615,6 +3781,16 @@
 	)
 	(wire
 		(pts
+			(xy 157.48 38.1) (xy 157.48 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8bf872d8-efb9-43d2-932a-8f71ae43e1f7")
+	)
+	(wire
+		(pts
 			(xy 228.6 73.66) (xy 228.6 74.93)
 		)
 		(stroke
@@ -3635,7 +3811,7 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 134.62) (xy 204.47 146.05)
+			(xy 204.47 133.35) (xy 204.47 146.05)
 		)
 		(stroke
 			(width 0)
@@ -3825,7 +4001,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 143.51) (xy 201.93 143.51)
+			(xy 196.85 144.78) (xy 201.93 144.78)
 		)
 		(stroke
 			(width 0)
@@ -3835,7 +4011,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 143.51) (xy 201.93 146.05)
+			(xy 201.93 144.78) (xy 201.93 146.05)
 		)
 		(stroke
 			(width 0)
@@ -3922,6 +4098,16 @@
 			(type default)
 		)
 		(uuid "c67c1fe9-5743-40c3-be30-3fb11af8b981")
+	)
+	(wire
+		(pts
+			(xy 196.85 144.78) (xy 196.85 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c73fc018-e9f0-4a5d-b9b9-2f41c9d723e5")
 	)
 	(wire
 		(pts
@@ -4012,16 +4198,6 @@
 			(type default)
 		)
 		(uuid "dbc5c2e3-fb76-4aee-af28-07d83679fe47")
-	)
-	(wire
-		(pts
-			(xy 195.58 143.51) (xy 195.58 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dbcd7cf4-7f5e-45af-84f4-230571bf8416")
 	)
 	(wire
 		(pts
@@ -4292,6 +4468,72 @@
 			(type default)
 		)
 		(uuid "fe547538-074d-4b2a-89fd-deb8a16652b3")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 227.33 144.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "016d7300-c014-4f59-9c35-c570bee061ff")
+		(property "Reference" "#PWR018"
+			(at 227.33 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 227.33 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 227.33 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 227.33 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1cf2b6ef-a3d1-4fc2-9ec2-4af1bfae9822")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
@@ -4638,7 +4880,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 195.58 147.32 0)
+		(at 196.85 148.59 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4647,7 +4889,7 @@
 		(fields_autoplaced yes)
 		(uuid "16e05e30-6b49-409c-8892-7b73b8323ad9")
 		(property "Reference" "#PWR014"
-			(at 195.58 153.67 0)
+			(at 196.85 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4656,7 +4898,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 195.58 152.4 0)
+			(at 196.85 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4664,7 +4906,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 195.58 147.32 0)
+			(at 196.85 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4673,7 +4915,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 195.58 147.32 0)
+			(at 196.85 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4682,7 +4924,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 195.58 147.32 0)
+			(at 196.85 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5040,7 +5282,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 204.47 134.62 0)
+		(at 204.47 133.35 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5049,7 +5291,7 @@
 		(fields_autoplaced yes)
 		(uuid "2a5989b3-1af6-4e64-8d60-6586acba1096")
 		(property "Reference" "#PWR013"
-			(at 204.47 138.43 0)
+			(at 204.47 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5058,7 +5300,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 204.47 129.54 0)
+			(at 204.47 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5066,7 +5308,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 204.47 134.62 0)
+			(at 204.47 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5075,7 +5317,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 204.47 134.62 0)
+			(at 204.47 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5084,7 +5326,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 204.47 134.62 0)
+			(at 204.47 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5099,6 +5341,76 @@
 			(project "matrix-game"
 				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
 					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 227.33 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2e75daba-fcda-4764-b4ba-6ef64c9eccd0")
+		(property "Reference" "C1"
+			(at 231.14 138.4299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 231.14 140.9699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm"
+			(at 228.2952 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 227.33 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 227.33 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "de250c14-48c3-4659-9ff1-4f4fadde4038")
+		)
+		(pin "1"
+			(uuid "f274091a-b691-4897-a5e7-a55f318a2646")
+		)
+		(instances
+			(project ""
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -5692,6 +6004,76 @@
 			(project ""
 				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 157.48 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "557c2885-0a73-444a-845d-82945f630e17")
+		(property "Reference" "C2"
+			(at 161.29 33.0199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 161.29 35.5599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm"
+			(at 158.4452 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 157.48 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 157.48 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "aef7b8d4-12ef-4276-a677-7ce0cdd9a94a")
+		)
+		(pin "1"
+			(uuid "86b08b58-afb2-45b2-9cd0-e7c4c5e03349")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -7006,6 +7388,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 157.48 39.37 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cce5ed65-b6d9-417b-89c9-3119534c8e00")
+		(property "Reference" "#PWR015"
+			(at 157.48 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 157.48 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 157.48 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 157.48 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 157.48 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "db45aaef-49cf-4774-9a48-1a2de856c84a")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 172.72 44.45 0)
 		(unit 1)
@@ -7205,6 +7653,72 @@
 			(project ""
 				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
 					(reference "SW4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 227.33 133.35 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d224b621-f325-418a-92dc-e0673e2e848a")
+		(property "Reference" "#PWR017"
+			(at 227.33 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 227.33 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 227.33 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 227.33 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "827bc079-8ca7-40b9-8792-5209de28f2e7")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -7543,6 +8057,72 @@
 			(project ""
 				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 157.48 29.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f351b9d0-1f8f-49f4-8e19-821297c32a40")
+		(property "Reference" "#PWR016"
+			(at 157.48 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 157.48 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 157.48 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 157.48 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 157.48 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b4493e06-529f-4f21-ae56-09afed913a7b")
+		)
+		(instances
+			(project "matrix-game"
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
