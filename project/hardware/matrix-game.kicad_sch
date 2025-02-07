@@ -4,6 +4,13 @@
 	(generator_version "8.0")
 	(uuid "84955768-42fa-4149-b8df-35c5d6dc27b9")
 	(paper "A4")
+	(title_block
+		(title "Schnupperlehre Elektroniker/in | Projekt Matrix-Game")
+		(date "2025-02-07")
+		(rev "v1.0")
+		(company "GWF AG")
+		(comment 1 "Timon Burkard")
+	)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
 			(pin_numbers hide)
