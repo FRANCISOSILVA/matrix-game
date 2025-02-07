@@ -6119,6 +6119,17 @@
 			(solder_mask_margin 0.102)
 			(uuid "63e1b1e0-55e3-49b2-871d-acc072e62607")
 		)
+		(model "${KIPRJMOD}/libs/TA23-11EWA/TA23-11EWA.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 0 0)
+			)
+		)
 	)
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 		(layer "F.Cu")
@@ -8874,6 +8885,17 @@
 			(pintype "bidirectional+no_connect")
 			(solder_mask_margin 0.102)
 			(uuid "869bb9b3-d716-4434-bde1-be852ec2eaaf")
+		)
+		(model "${KIPRJMOD}/libs/NUCLEO_F042K6/NUCLEO-F042K6.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 0 0)
+			)
 		)
 	)
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
