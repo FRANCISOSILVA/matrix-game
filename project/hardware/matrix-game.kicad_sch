@@ -114,141 +114,6 @@
 				)
 			)
 		)
-		(symbol "Custom_Library:LCD_I2C"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at 1.524 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SSD1306"
-				(at 1.27 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "LCD_I2C_0_1"
-				(rectangle
-					(start -3.81 7.62)
-					(end 6.35 -1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "LCD_I2C_1_1"
-				(pin input line
-					(at -2.54 10.16 270)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 0 10.16 270)
-					(length 2.54)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 2.54 10.16 270)
-					(length 2.54)
-					(name "SCL"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 5.08 10.16 270)
-					(length 2.54)
-					(name "SDA"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:Buzzer"
 			(pin_names
 				(offset 0.0254) hide)
@@ -1463,6 +1328,265 @@
 						(effects
 							(font
 								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "lcd:DM-OLED096-636"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -7.62 10.922 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" "DM-OLED096-636"
+				(at -7.62 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "DM-OLED096-636:MODULE_DM-OLED096-636"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "MF" "Display Module"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MAXIMUM_PACKAGE_HEIGHT" "11.3 mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Package" "Package"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Price" "None"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Check_prices" "https://www.snapeda.com/parts/DM-OLED096-636/Display+Module/view-part/?ref=eda"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "STANDARD" "Manufacturer Recommendations"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "PARTREV" "2018-09-10"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "SnapEDA_Link" "https://www.snapeda.com/parts/DM-OLED096-636/Display+Module/view-part/?ref=snap"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MP" "DM-OLED096-636"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Description_1" "\n                        \n                            0.96” 128 X 64 MONOCHROME GRAPHIC OLED DISPLAY MODULE - I2C\n                        \n"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Availability" "Not in stock"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MANUFACTURER" "Displaymodule"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(symbol "DM-OLED096-636_0_0"
+				(rectangle
+					(start -7.62 -7.62)
+					(end 7.62 10.16)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin power_in line
+					(at 12.7 -5.08 180)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 12.7 7.62 180)
+					(length 5.08)
+					(name "VCC_IN"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input clock
+					(at 12.7 2.54 180)
+					(length 5.08)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 0 180)
+					(length 5.08)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.016 1.016)
 							)
 						)
 					)
@@ -3342,6 +3466,16 @@
 	)
 	(wire
 		(pts
+			(xy 203.2 128.27) (xy 203.2 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27a4af07-4cd0-44a5-9b8c-50d8d082d3fb")
+	)
+	(wire
+		(pts
 			(xy 213.36 62.23) (xy 273.05 62.23)
 		)
 		(stroke
@@ -3369,16 +3503,6 @@
 			(type default)
 		)
 		(uuid "2ffd30a2-b651-4cc6-bfb1-7b3b1b33e695")
-	)
-	(wire
-		(pts
-			(xy 226.06 130.81) (xy 226.06 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "30789ce5-8266-4665-b819-90065d8098a2")
 	)
 	(wire
 		(pts
@@ -3482,6 +3606,16 @@
 	)
 	(wire
 		(pts
+			(xy 203.2 127) (xy 198.12 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42c13f02-b965-417a-a67a-5bf3770acabd")
+	)
+	(wire
+		(pts
 			(xy 261.62 39.37) (xy 275.59 39.37)
 		)
 		(stroke
@@ -3492,7 +3626,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 120.65) (xy 242.57 123.19)
+			(xy 223.52 119.38) (xy 223.52 121.92)
 		)
 		(stroke
 			(width 0)
@@ -3529,16 +3663,6 @@
 			(type default)
 		)
 		(uuid "48e9f3b8-c533-4d63-be59-85ad28d5bb5b")
-	)
-	(wire
-		(pts
-			(xy 226.06 132.08) (xy 224.79 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4e08edc8-349e-43e0-89d6-1724608bfbbd")
 	)
 	(wire
 		(pts
@@ -3672,6 +3796,16 @@
 	)
 	(wire
 		(pts
+			(xy 198.12 124.46) (xy 204.47 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e7edd3e-d771-4c04-b6d1-9a44fac59308")
+	)
+	(wire
+		(pts
 			(xy 224.79 33.02) (xy 224.79 49.53)
 		)
 		(stroke
@@ -3712,13 +3846,13 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 130.81) (xy 222.25 133.35)
+			(xy 203.2 114.3) (xy 203.2 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "71a811bc-395d-443f-9075-d25720252fd9")
+		(uuid "72df9b01-759b-4860-868f-e939c1956715")
 	)
 	(wire
 		(pts
@@ -3729,6 +3863,26 @@
 			(type default)
 		)
 		(uuid "72f868a9-c5d0-477c-bafb-f50995d7de50")
+	)
+	(wire
+		(pts
+			(xy 204.47 128.27) (xy 203.2 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74952d4a-23be-45be-904b-e8af6dd6b590")
+	)
+	(wire
+		(pts
+			(xy 198.12 132.08) (xy 203.2 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ac0596c-7e31-45b9-9c86-26e3773442cf")
 	)
 	(wire
 		(pts
@@ -3772,7 +3926,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 130.81) (xy 242.57 132.08)
+			(xy 223.52 129.54) (xy 223.52 130.81)
 		)
 		(stroke
 			(width 0)
@@ -3872,6 +4026,16 @@
 	)
 	(wire
 		(pts
+			(xy 203.2 119.38) (xy 198.12 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d84ea70-1f61-452d-990b-ceba3216f83f")
+	)
+	(wire
+		(pts
 			(xy 228.6 72.39) (xy 228.6 73.66)
 		)
 		(stroke
@@ -3889,16 +4053,6 @@
 			(type default)
 		)
 		(uuid "8fb1d951-5d15-4885-85c2-0447c66f2930")
-	)
-	(wire
-		(pts
-			(xy 215.9 127) (xy 215.9 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "915492c7-2adb-42d6-91b4-6d278913632f")
 	)
 	(wire
 		(pts
@@ -4032,6 +4186,16 @@
 	)
 	(wire
 		(pts
+			(xy 203.2 132.08) (xy 203.2 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7f18f0d-9050-4db5-b350-8b81bc379cf1")
+	)
+	(wire
+		(pts
 			(xy 199.39 59.69) (xy 209.55 59.69)
 		)
 		(stroke
@@ -4079,26 +4243,6 @@
 			(type default)
 		)
 		(uuid "ac62ebfc-8971-4af7-a0c5-aae6463fa891")
-	)
-	(wire
-		(pts
-			(xy 212.09 132.08) (xy 217.17 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b807717c-6ae6-4033-80d8-4816a161644c")
-	)
-	(wire
-		(pts
-			(xy 217.17 132.08) (xy 217.17 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9617ab7-9a57-4081-b5b5-8ac356ff444a")
 	)
 	(wire
 		(pts
@@ -4172,16 +4316,6 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 132.08) (xy 212.09 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c73fc018-e9f0-4a5d-b9b9-2f41c9d723e5")
-	)
-	(wire
-		(pts
 			(xy 95.25 52.07) (xy 96.52 52.07)
 		)
 		(stroke
@@ -4229,16 +4363,6 @@
 			(type default)
 		)
 		(uuid "d4fb734d-d319-4a82-8943-0333da62c779")
-	)
-	(wire
-		(pts
-			(xy 224.79 132.08) (xy 224.79 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6437b4c-4643-4670-ae99-8fc3fe8be4e5")
 	)
 	(wire
 		(pts
@@ -4312,16 +4436,6 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 128.27) (xy 219.71 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e2431f22-ff2f-425a-ad42-0b15bf357076")
-	)
-	(wire
-		(pts
 			(xy 280.67 34.29) (xy 261.62 34.29)
 		)
 		(stroke
@@ -4359,16 +4473,6 @@
 			(type default)
 		)
 		(uuid "ec46b693-2786-4dd2-b238-1a7e775e09af")
-	)
-	(wire
-		(pts
-			(xy 219.71 128.27) (xy 219.71 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ed0f08eb-fd73-4a64-89fa-a3ae2b2394d9")
 	)
 	(wire
 		(pts
@@ -4600,7 +4704,7 @@
 	)
 	(global_label "lcd_sda"
 		(shape input)
-		(at 226.06 130.81 90)
+		(at 204.47 128.27 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4610,7 +4714,7 @@
 		)
 		(uuid "54d95d13-7d5f-4f85-8554-626dd3c0b5e0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 226.06 120.6283 90)
+			(at 214.6517 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4710,7 +4814,7 @@
 	)
 	(global_label "lcd_scl"
 		(shape input)
-		(at 222.25 130.81 90)
+		(at 204.47 124.46 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4720,7 +4824,7 @@
 		)
 		(uuid "a34db3de-af20-4128-b5ea-7c8dcc21ae7d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 222.25 121.1725 90)
+			(at 214.1075 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4952,7 +5056,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 242.57 132.08 0)
+		(at 223.52 130.81 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4961,7 +5065,7 @@
 		(fields_autoplaced yes)
 		(uuid "016d7300-c014-4f59-9c35-c570bee061ff")
 		(property "Reference" "#PWR018"
-			(at 242.57 138.43 0)
+			(at 223.52 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4970,7 +5074,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 242.57 137.16 0)
+			(at 223.52 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4978,7 +5082,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 242.57 132.08 0)
+			(at 223.52 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4987,7 +5091,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 242.57 132.08 0)
+			(at 223.52 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4996,7 +5100,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 242.57 132.08 0)
+			(at 223.52 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5217,82 +5321,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Custom_Library:LCD_I2C")
-		(at 219.71 143.51 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "161383e1-a1a8-4f3a-9693-323d92f93ebc")
-		(property "Reference" "U3"
-			(at 227.33 139.6999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SSD1306"
-			(at 227.33 141.605 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Custom_Library:LCD_I2C"
-			(at 219.71 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 219.71 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 219.71 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "eca040a3-c54f-42a3-bb5d-ae330107a481")
-		)
-		(pin "1"
-			(uuid "24dc70af-9f8b-4384-a944-f06f373ef1ba")
-		)
-		(pin "4"
-			(uuid "5544291d-dfb3-4bde-973e-2bd08707f40b")
-		)
-		(pin "3"
-			(uuid "b0c24406-7330-4d7a-ab87-5f17a7fa5506")
-		)
-		(instances
-			(project ""
-				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
-					(reference "U3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 220.98 30.48 0)
 		(unit 1)
@@ -5361,7 +5389,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 212.09 135.89 0)
+		(at 203.2 135.89 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5370,7 +5398,7 @@
 		(fields_autoplaced yes)
 		(uuid "16e05e30-6b49-409c-8892-7b73b8323ad9")
 		(property "Reference" "#PWR014"
-			(at 212.09 142.24 0)
+			(at 203.2 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5379,7 +5407,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 212.09 140.97 0)
+			(at 203.2 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5387,7 +5415,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 212.09 135.89 0)
+			(at 203.2 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5396,7 +5424,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 212.09 135.89 0)
+			(at 203.2 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5405,7 +5433,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 212.09 135.89 0)
+			(at 203.2 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5828,7 +5856,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 215.9 127 0)
+		(at 203.2 114.3 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5837,7 +5865,7 @@
 		(fields_autoplaced yes)
 		(uuid "2a5989b3-1af6-4e64-8d60-6586acba1096")
 		(property "Reference" "#PWR013"
-			(at 215.9 130.81 0)
+			(at 203.2 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5846,7 +5874,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 215.9 121.92 0)
+			(at 203.2 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5854,7 +5882,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 215.9 127 0)
+			(at 203.2 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5863,7 +5891,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.9 127 0)
+			(at 203.2 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5872,7 +5900,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 215.9 127 0)
+			(at 203.2 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5894,7 +5922,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 242.57 127 0)
+		(at 223.52 125.73 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5903,7 +5931,7 @@
 		(fields_autoplaced yes)
 		(uuid "2e75daba-fcda-4764-b4ba-6ef64c9eccd0")
 		(property "Reference" "C1"
-			(at 246.38 125.7299 0)
+			(at 227.33 124.4599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5912,7 +5940,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 246.38 128.2699 0)
+			(at 227.33 126.9999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5921,7 +5949,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm"
-			(at 243.5352 130.81 0)
+			(at 224.4852 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5930,7 +5958,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 242.57 127 0)
+			(at 223.52 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5939,7 +5967,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 242.57 127 0)
+			(at 223.52 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6225,6 +6253,201 @@
 			(project ""
 				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
 					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lcd:DM-OLED096-636")
+		(at 185.42 127 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3afbc9c3-497b-42c6-a7d7-105932b75d37")
+		(property "Reference" "U3"
+			(at 185.42 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DM-OLED096-636"
+			(at 185.42 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "DM-OLED096-636:MODULE_DM-OLED096-636"
+			(at 185.42 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 185.42 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 185.42 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "Display Module"
+			(at 185.42 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "11.3 mm"
+			(at 185.42 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "Package"
+			(at 185.42 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 185.42 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/DM-OLED096-636/Display+Module/view-part/?ref=eda"
+			(at 185.42 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 185.42 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "2018-09-10"
+			(at 185.42 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/DM-OLED096-636/Display+Module/view-part/?ref=snap"
+			(at 185.42 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "DM-OLED096-636"
+			(at 185.42 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "\n                        \n                            0.96” 128 X 64 MONOCHROME GRAPHIC OLED DISPLAY MODULE - I2C\n                        \n"
+			(at 185.42 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "Not in stock"
+			(at 185.42 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Displaymodule"
+			(at 185.42 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "b2716c46-a237-4446-8226-a096b8c2304f")
+		)
+		(pin "1"
+			(uuid "cd022114-3fdf-4514-a52b-865f8c80d3e3")
+		)
+		(pin "2"
+			(uuid "6f1700ca-186e-4eb0-89be-f31aa1d0e400")
+		)
+		(pin "3"
+			(uuid "a7e7c8c1-c46d-4239-8ca1-75b5c45d7462")
+		)
+		(instances
+			(project ""
+				(path "/84955768-42fa-4149-b8df-35c5d6dc27b9"
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -8203,7 +8426,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 242.57 120.65 0)
+		(at 223.52 119.38 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8212,7 +8435,7 @@
 		(fields_autoplaced yes)
 		(uuid "d224b621-f325-418a-92dc-e0673e2e848a")
 		(property "Reference" "#PWR017"
-			(at 242.57 124.46 0)
+			(at 223.52 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8221,7 +8444,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 242.57 115.57 0)
+			(at 223.52 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8229,7 +8452,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 242.57 120.65 0)
+			(at 223.52 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8238,7 +8461,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 242.57 120.65 0)
+			(at 223.52 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8247,7 +8470,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 242.57 120.65 0)
+			(at 223.52 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
