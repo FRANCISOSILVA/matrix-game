@@ -3093,12 +3093,6 @@
 		(uuid "57a2a005-1276-45d0-85dc-0cbf259124c7")
 	)
 	(junction
-		(at 127 54.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "60b141d9-2345-45be-8c5a-76a7e6fd60ab")
-	)
-	(junction
 		(at 209.55 39.37)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3366,16 +3360,6 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 54.61) (xy 95.25 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1affe640-f47e-4357-8038-25a0ca2bc4ff")
-	)
-	(wire
-		(pts
 			(xy 157.48 30.48) (xy 157.48 31.75)
 		)
 		(stroke
@@ -3633,16 +3617,6 @@
 			(type default)
 		)
 		(uuid "450197cf-2ba0-47f1-a0a5-a749bb89e69e")
-	)
-	(wire
-		(pts
-			(xy 127 54.61) (xy 129.54 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "458cfe68-5e18-42c5-9cdc-41fe74e39247")
 	)
 	(wire
 		(pts
@@ -4156,6 +4130,16 @@
 	)
 	(wire
 		(pts
+			(xy 95.25 54.61) (xy 115.57 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a25968b3-48d4-4c9e-bdba-4c8a8611e7e5")
+	)
+	(wire
+		(pts
 			(xy 78.74 101.6) (xy 78.74 104.14)
 		)
 		(stroke
@@ -4516,16 +4500,6 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 54.61) (xy 127 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f20a2da9-01dd-4eec-95fc-b9adefe2b487")
-	)
-	(wire
-		(pts
 			(xy 217.17 33.02) (xy 217.17 44.45)
 		)
 		(stroke
@@ -4593,6 +4567,16 @@
 			(type default)
 		)
 		(uuid "fb99efa5-9191-4dac-9c20-59b6c7a549d3")
+	)
+	(wire
+		(pts
+			(xy 125.73 54.61) (xy 129.54 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbfd66fe-2264-44ea-8675-77648da4b3e9")
 	)
 	(wire
 		(pts
@@ -8562,7 +8546,7 @@
 	)
 	(symbol
 		(lib_id "Jumper:Jumper_2_Bridged")
-		(at 121.92 54.61 0)
+		(at 120.65 54.61 0)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom yes)
@@ -8570,7 +8554,7 @@
 		(dnp no)
 		(uuid "db752425-87df-4fb5-a1b9-6e1f676dd765")
 		(property "Reference" "JP1"
-			(at 121.92 49.53 0)
+			(at 120.65 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8578,7 +8562,7 @@
 			)
 		)
 		(property "Value" "Jumper_2_Bridged"
-			(at 80.01 5.08 0)
+			(at 78.74 5.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8586,7 +8570,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 121.92 54.61 0)
+			(at 120.65 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8595,7 +8579,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 121.92 54.61 0)
+			(at 120.65 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8604,7 +8588,7 @@
 			)
 		)
 		(property "Description" "Jumper, 2-pole, closed/bridged"
-			(at 121.92 54.61 0)
+			(at 120.65 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
