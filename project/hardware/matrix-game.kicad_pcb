@@ -7,6 +7,13 @@
 		(legacy_teardrops no)
 	)
 	(paper "A4")
+	(title_block
+		(title "Schnupperlehre Elektroniker/in | Projekt Matrix-Game")
+		(date "2025-02-07")
+		(rev "v1.0")
+		(company "GWF AG")
+		(comment 1 "Timon Burkard")
+	)
 	(layers
 		(0 "F.Cu" signal)
 		(31 "B.Cu" signal)
