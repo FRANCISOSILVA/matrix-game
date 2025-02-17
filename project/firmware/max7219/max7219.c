@@ -40,7 +40,7 @@ max7219_error_t max7219_init(max7219_t* max7219, const SPI_HandleTypeDef* spi, c
         return error_code;
     }
 
-    error_code = max7219_send(max7219, MAX7219_ADR_INTENSITY, MAX7219_REG_INTENSITY_15_32);
+    error_code = max7219_send(max7219, MAX7219_ADR_INTENSITY, MAX7219_REG_INTENSITY_25_32);
 
     if (error_code != MAX7219_OK) {
         return error_code;
