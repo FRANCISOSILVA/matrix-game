@@ -154,6 +154,15 @@ typedef enum {
 max7219_error_t max7219_init(max7219_t* max7219, const SPI_HandleTypeDef* spi, const GPIO_TypeDef* cs_port, uint16_t cs_pin);
 
 /**
+ * @brief MAX7219 clear matrix LED
+ *
+ * @param max7219 -- Pointer to MAX7219 handle
+ *
+ * @return max7219_error_t -- Error code
+ */
+max7219_error_t max7219_clear(const max7219_t* max7219);
+
+/**
  * @brief MAX7219 send data over SPI
  *
  * @param[in] max7219 -- Pointer to MAX7219 handle

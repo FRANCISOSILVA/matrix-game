@@ -36,55 +36,6 @@ void app(void)
         } // Error handling...
     }
 
-    error_code = max7219_send(&max7219, MAX7219_ADR_SHUTDOWN, MAX7219_REG_SHUTDOWN_MODE_NORMAL);
-
-    if (error_code != MAX7219_OK) {
-        for (;;) {
-        } // Error handling...
-    }
-
-    error_code = max7219_send(&max7219, MAX7219_ADR_SCAN_LIMIT, MAX7219_REG_SCAN_LIMIT_DIG_0_7);
-
-    if (error_code != MAX7219_OK) {
-        for (;;) {
-        } // Error handling...
-    }
-
-    error_code = max7219_send(&max7219, MAX7219_ADR_INTENSITY, MAX7219_REG_INTENSITY_15_32);
-
-    if (error_code != MAX7219_OK) {
-        for (;;) {
-        } // Error handling...
-    }
-
-    error_code = max7219_send(&max7219, MAX7219_ADR_DISPLAY_TEST, MAX7219_REG_DISPLAY_TEST_MODE_TEST);
-
-    if (error_code != MAX7219_OK) {
-        for (;;) {
-        } // Error handling...
-    }
-
-    error_code = max7219_send(&max7219, MAX7219_ADR_DISPLAY_TEST, MAX7219_REG_DISPLAY_TEST_MODE_NORMAL);
-
-    if (error_code != MAX7219_OK) {
-        for (;;) {
-        } // Error handling...
-    }
-
-    error_code = max7219_send(&max7219, MAX7219_COLUMN_0, 0x00);
-    error_code = max7219_send(&max7219, MAX7219_COLUMN_1, 0x00);
-    error_code = max7219_send(&max7219, MAX7219_COLUMN_2, 0x00);
-    error_code = max7219_send(&max7219, MAX7219_COLUMN_3, 0x00);
-    error_code = max7219_send(&max7219, MAX7219_COLUMN_4, 0x00);
-    error_code = max7219_send(&max7219, MAX7219_COLUMN_5, 0x00);
-    error_code = max7219_send(&max7219, MAX7219_COLUMN_6, 0x00);
-    error_code = max7219_send(&max7219, MAX7219_COLUMN_7, 0x00);
-
-    if (error_code != MAX7219_OK) {
-        for (;;) {
-        } // Error handling...
-    }
-
     bool matrix[MAX7219_COLUMN_AMOUNT][MAX7219_ROW_AMOUNT] = { false };
 
     matrix[0][0] = true;
