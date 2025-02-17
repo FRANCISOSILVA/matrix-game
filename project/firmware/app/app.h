@@ -1,8 +1,9 @@
-/*
- * app.h
+/**
+ * @file app.h
+ * @author Timon Burkard (timon.burkard@gwf.ch)
  *
- *  Created on: Feb 5, 2025
- *      Author: timon.burkard
+ * @copyright Copyright (c) 2025 GWF AG
+ *
  */
 
 #ifndef APP_H_
