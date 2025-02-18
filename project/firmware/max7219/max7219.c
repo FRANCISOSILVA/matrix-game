@@ -10,6 +10,8 @@
 
 max7219_error_t max7219_init(max7219_t* max7219, const SPI_HandleTypeDef* spi, const GPIO_TypeDef* cs_port, uint16_t cs_pin)
 {
+    max7219_error_t error_code = MAX7219_OK;
+
     if (max7219 == NULL) {
         return MAX7219_ERROR;
     }
@@ -25,6 +27,91 @@ max7219_error_t max7219_init(max7219_t* max7219, const SPI_HandleTypeDef* spi, c
     max7219->spi     = (SPI_HandleTypeDef*)spi;
     max7219->cs_port = (GPIO_TypeDef*)cs_port;
     max7219->cs_pin  = cs_pin;
+
+    error_code = max7219_clear(max7219);
+
+    if (error_code != MAX7219_OK) {
+        return error_code;
+    }
+
+    error_code = max7219_send(max7219, MAX7219_ADR_SCAN_LIMIT, MAX7219_REG_SCAN_LIMIT_DIG_0_7);
+
+    if (error_code != MAX7219_OK) {
+        return error_code;
+    }
+
+    error_code = max7219_send(max7219, MAX7219_ADR_INTENSITY, MAX7219_REG_INTENSITY_25_32);
+
+    if (error_code != MAX7219_OK) {
+        return error_code;
+    }
+
+    error_code = max7219_send(max7219, MAX7219_ADR_DISPLAY_TEST, MAX7219_REG_DISPLAY_TEST_MODE_NORMAL);
+
+    if (error_code != MAX7219_OK) {
+        return error_code;
+    }
+
+    error_code = max7219_send(max7219, MAX7219_ADR_SHUTDOWN, MAX7219_REG_SHUTDOWN_MODE_NORMAL);
+
+    if (error_code != MAX7219_OK) {
+        return error_code;
+    }
+
+    return MAX7219_OK;
+}
+
+max7219_error_t max7219_clear(const max7219_t* max7219)
+{
+    max7219_error_t error_code = MAX7219_OK;
+
+    error_code = max7219_send(max7219, MAX7219_COLUMN_0, 0x00);
+
+    if (error_code != MAX7219_OK) {
+        return error_code;
+    }
+
+    error_code = max7219_send(max7219, MAX7219_COLUMN_1, 0x00);
+
+    if (error_code != MAX7219_OK) {
+        return error_code;
+    }
+
+    error_code = max7219_send(max7219, MAX7219_COLUMN_2, 0x00);
+
+    if (error_code != MAX7219_OK) {
+        return error_code;
+    }
+
+    error_code = max7219_send(max7219, MAX7219_COLUMN_3, 0x00);
+
+    if (error_code != MAX7219_OK) {
+        return error_code;
+    }
+
+    error_code = max7219_send(max7219, MAX7219_COLUMN_4, 0x00);
+
+    if (error_code != MAX7219_OK) {
+        return error_code;
+    }
+
+    error_code = max7219_send(max7219, MAX7219_COLUMN_5, 0x00);
+
+    if (error_code != MAX7219_OK) {
+        return error_code;
+    }
+
+    error_code = max7219_send(max7219, MAX7219_COLUMN_6, 0x00);
+
+    if (error_code != MAX7219_OK) {
+        return error_code;
+    }
+
+    error_code = max7219_send(max7219, MAX7219_COLUMN_7, 0x00);
+
+    if (error_code != MAX7219_OK) {
+        return error_code;
+    }
 
     return MAX7219_OK;
 }
