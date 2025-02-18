@@ -162,7 +162,7 @@ void app(void)
                 for (uint8_t i = 0; i < SNAKE_SEQUENCE_PERIOD_10MS; i++) {
                     button = app_get_user_input(); // Takes 10 ms
 
-                    if (button != BUTTON_NONE) {
+                    if ((button != BUTTON_NONE) && (button != BUTTON_CENTER)) {
                         direction = button;
                     }
                 }
