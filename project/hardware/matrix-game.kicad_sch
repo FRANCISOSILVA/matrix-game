@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "Schnupperlehre Elektroniker/in | Projekt Matrix-Game")
-		(date "2025-02-07")
-		(rev "v1.0")
+		(date "2025-02-24")
+		(rev "v1.1")
 		(company "GWF AG")
 		(comment 1 "Timon Burkard")
 	)
