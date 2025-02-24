@@ -4598,6 +4598,16 @@
 		)
 		(uuid "fcd81dfd-bcc3-47b0-92a2-d58b40148f49")
 	)
+	(text "Remove JP on Nucleo between D2 and GND!"
+		(exclude_from_sim no)
+		(at 75.438 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "fd912a73-ac20-4c84-bd37-e34efcb8b44e")
+	)
 	(global_label "lcd_scl"
 		(shape input)
 		(at 48.26 58.42 180)
