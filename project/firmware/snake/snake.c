@@ -16,6 +16,18 @@
 
 #define NO_FOOD 0xFF
 
+#define MAX_SNAKE_LENGTH 63
+
+#define FLASH_HIGHSCORE_ADDRESS 0x08007F00 // Last page
+
+#define SNAKE_SEQUENCE_PERIOD_10MS 25 // Period for each sequence (i.e., snake "steps") in multiple of 10ms
+
+typedef enum {
+    MOVE_NORMAL,    // A regular move (game not over; snake did not eat food)
+    MOVE_EAT,       // Snake ate food
+    MOVE_GAME_OVER, // Snake hit the wall or itself
+} move_t;
+
 typedef struct {
     uint8_t col;
     uint8_t row;
@@ -27,53 +39,110 @@ typedef struct snake_part {
     struct snake_part* next;
 } snake_part_t;
 
-static snake_part_t* head                                             = NULL;
-static snake_part_t  snake[MAX7219_COLUMN_AMOUNT][MAX7219_ROW_AMOUNT] = { 0 };
+static snake_part_t* head                                                    = NULL;
+static snake_part_t  snake_fields[MAX7219_COLUMN_AMOUNT][MAX7219_ROW_AMOUNT] = { 0 };
 
 static snake_part_t food = { NO_FOOD, NO_FOOD };
 
-static void    add_head(snake_part_t** snake_head, coordinates_t new_head);
-static void    add_head_remove_tail(snake_part_t** snake_head, coordinates_t new_head);
-static bool    is_game_over(coordinates_t new_head);
-static bool    is_eating(coordinates_t new_head);
-static move_t  apply_new_head(snake_part_t** snake_head, coordinates_t new_head);
-static move_t  move_left(snake_part_t** snake_head);
-static move_t  move_right(snake_part_t** snake_head);
-static move_t  move_up(snake_part_t** snake_head);
-static move_t  move_down(snake_part_t** snake_head);
-static uint8_t calc_score(void);
-static void    print_score(uint16_t score);
+static void     add_head(snake_part_t** snake_head, coordinates_t new_head);
+static void     add_head_remove_tail(snake_part_t** snake_head, coordinates_t new_head);
+static bool     is_game_over(coordinates_t new_head);
+static bool     is_eating(coordinates_t new_head);
+static move_t   apply_new_head(snake_part_t** snake_head, coordinates_t new_head);
+static move_t   move_left(snake_part_t** snake_head);
+static move_t   move_right(snake_part_t** snake_head);
+static move_t   move_up(snake_part_t** snake_head);
+static move_t   move_down(snake_part_t** snake_head);
+static uint8_t  calc_score(void);
+static void     print_score(uint16_t score);
+static void     flash_init_highscore(void);
+static uint16_t flash_load_highscore(void);
+static void     flash_save_highscore(uint16_t score);
+static void     convert_to_matrix(bool matrix[MAX7219_COLUMN_AMOUNT][MAX7219_ROW_AMOUNT]);
+static void     init(void);
+static void     lcd_start(void);
+static void     food_generate(void);
+static void     handle_score(void);
+static move_t   move_snake(button_t direction);
+static void     start_game(button_t* direction);
 
-void snake_init(void)
+void snake(void)
+{
+    button_t button     = BUTTON_NONE;
+    button_t direction  = BUTTON_RIGHT;
+    move_t   move_state = MOVE_NORMAL;
+
+    srand(HAL_GetTick());
+
+    flash_init_highscore();
+
+    init();
+    lcd_start();
+    start_game(&direction);
+
+    while (app_get_user_input() == BUTTON_NONE) {
+        // Wait for user to start the game
+    }
+
+    do {
+        app_beep(BEEP_SHORT_MS);
+        food_generate();
+
+        do {
+            for (uint8_t i = 0; i < SNAKE_SEQUENCE_PERIOD_10MS; i++) {
+                button = app_get_user_input(); // Takes 10 ms
+
+                if ((button != BUTTON_NONE) && (button != BUTTON_CENTER)) {
+                    direction = button;
+                }
+            }
+
+            move_state = move_snake(direction);
+
+            convert_to_matrix(matrix);
+
+            if (max7219_set_matrix(&max7219, matrix) != MAX7219_OK) {
+                for (;;) {
+                } // Error handling...
+            }
+        } while (move_state == MOVE_NORMAL);
+    } while (move_state != MOVE_GAME_OVER);
+
+    app_beep(BEEP_LONG_MS);
+    handle_score();
+
+    while (app_get_user_input() == BUTTON_NONE) {
+        // Wait for user to start the game
+    }
+}
+
+static void init(void)
 {
     for (uint8_t i = 0; i < MAX7219_COLUMN_AMOUNT; i++) {
         for (uint8_t j = 0; j < MAX7219_ROW_AMOUNT; j++) {
-            snake[i][j].col  = i;
-            snake[i][j].row  = j;
-            snake[i][j].next = NULL;
+            snake_fields[i][j].col  = i;
+            snake_fields[i][j].row  = j;
+            snake_fields[i][j].next = NULL;
         }
     }
 }
 
-void snake_lcd_start(void)
+static void lcd_start(void)
 {
     char highscore[20] = "";
 
-    sprintf(highscore, "Highscore: %d", app_flash_load_highscore());
+    sprintf(highscore, "Highscore: %d", flash_load_highscore());
 
-    SSD1306_Clear();
-    SSD1306_GotoXY(0, 0);
-    SSD1306_Puts("GWF Schnupperlehre", &Font_7x10, 1);
-    SSD1306_GotoXY(0, 10);
-    SSD1306_Puts("-----------------", &Font_7x10, 1);
-    SSD1306_GotoXY(0, 25);
+    app_lcd_print_title();
+
+    SSD1306_GotoXY(0, APP_LCD_ROW_GAME_NAME);
     SSD1306_Puts("Snake Game", &Font_7x10, 1);
-    SSD1306_GotoXY(0, 39);
+    SSD1306_GotoXY(0, APP_LCD_ROW_GAME_DYNAMIC_0);
     SSD1306_Puts(highscore, &Font_7x10, 1);
     SSD1306_UpdateScreen();
 }
 
-void snake_convert_to_matrix(bool matrix[MAX7219_COLUMN_AMOUNT][MAX7219_ROW_AMOUNT])
+static void convert_to_matrix(bool matrix[MAX7219_COLUMN_AMOUNT][MAX7219_ROW_AMOUNT])
 {
     snake_part_t* temp = head;
 
@@ -89,7 +158,7 @@ void snake_convert_to_matrix(bool matrix[MAX7219_COLUMN_AMOUNT][MAX7219_ROW_AMOU
     }
 }
 
-void snake_food_generate(void)
+static void food_generate(void)
 {
     do {
         food.col = rand() % MAX7219_COLUMN_AMOUNT;
@@ -104,7 +173,7 @@ void snake_food_generate(void)
  *
  * @return move_t
  */
-move_t snake_move(button_t direction)
+static move_t move_snake(button_t direction)
 {
     switch (direction) {
     case BUTTON_UP:
@@ -124,28 +193,28 @@ move_t snake_move(button_t direction)
     }
 }
 
-void snake_handle_score(void)
+static void handle_score(void)
 {
     uint16_t score = calc_score();
     print_score(score);
 
-    uint16_t highscore = app_flash_load_highscore();
+    uint16_t highscore = flash_load_highscore();
 
     if (score > highscore) {
-        app_flash_save_highscore(score);
+        flash_save_highscore(score);
     }
 }
 
-void snake_start_game(button_t* direction)
+static void start_game(button_t* direction)
 {
     // Start at the middle
-    head       = &snake[MAX7219_COLUMN_AMOUNT / 2][MAX7219_ROW_AMOUNT / 2];
+    head       = &snake_fields[MAX7219_COLUMN_AMOUNT / 2][MAX7219_ROW_AMOUNT / 2];
     head->next = NULL;
 
     food.col = NO_FOOD;
     food.row = NO_FOOD;
 
-    snake_convert_to_matrix(matrix);
+    convert_to_matrix(matrix);
 
     if (max7219_set_matrix(&max7219, matrix) != MAX7219_OK) {
         for (;;) {
@@ -157,7 +226,7 @@ void snake_start_game(button_t* direction)
 
 static void add_head(snake_part_t** snake_head, coordinates_t new_head)
 {
-    snake_part_t* new_head_node = &snake[new_head.col][new_head.row];
+    snake_part_t* new_head_node = &snake_fields[new_head.col][new_head.row];
 
     new_head_node->next = *snake_head;
 
@@ -167,7 +236,7 @@ static void add_head(snake_part_t** snake_head, coordinates_t new_head)
 static void add_head_remove_tail(snake_part_t** snake_head, coordinates_t new_head)
 {
     snake_part_t* temp;
-    snake_part_t* new_head_node = &snake[new_head.col][new_head.row];
+    snake_part_t* new_head_node = &snake_fields[new_head.col][new_head.row];
 
     new_head_node->next = *snake_head;
 
@@ -204,7 +273,8 @@ static bool is_game_over(coordinates_t new_head)
         return true;
     }
 
-    snake_part_t* temp = head;
+    uint8_t       snake_length = 0;
+    snake_part_t* temp         = head;
 
     while (temp != NULL) {
         if ((temp->col == new_head.col) && (temp->row == new_head.row)) {
@@ -212,6 +282,12 @@ static bool is_game_over(coordinates_t new_head)
         }
 
         temp = temp->next;
+
+        ++snake_length;
+    }
+
+    if (snake_length >= MAX_SNAKE_LENGTH) {
+        return true;
     }
 
     return false;
@@ -342,7 +418,39 @@ static void print_score(uint16_t score)
 
     sprintf(string, "Score: %d", score);
 
-    SSD1306_GotoXY(0, 53);
+    SSD1306_GotoXY(0, APP_LCD_ROW_GAME_DYNAMIC_1);
     SSD1306_Puts(string, &Font_7x10, 1);
     SSD1306_UpdateScreen();
+}
+
+/**
+ * @brief Initialize the highscore in flash memory, if not yet done
+ */
+static void flash_init_highscore(void)
+{
+    if (flash_load_highscore() == 0xFFFF) {
+        flash_save_highscore(0);
+    }
+}
+
+static uint16_t flash_load_highscore(void)
+{
+    return *((uint16_t*)FLASH_HIGHSCORE_ADDRESS); // Read stored value
+}
+
+static void flash_save_highscore(uint16_t score)
+{
+    HAL_FLASH_Unlock(); // Unlock flash for writing
+
+    FLASH_EraseInitTypeDef EraseInitStruct;
+    uint32_t               PageError = 0;
+
+    EraseInitStruct.TypeErase   = FLASH_TYPEERASE_PAGES;
+    EraseInitStruct.PageAddress = FLASH_HIGHSCORE_ADDRESS;
+    EraseInitStruct.NbPages     = 1;
+    HAL_FLASHEx_Erase(&EraseInitStruct, &PageError); // Erase before writing
+
+    HAL_FLASH_Program(FLASH_TYPEPROGRAM_HALFWORD, FLASH_HIGHSCORE_ADDRESS, score);
+
+    HAL_FLASH_Lock(); // Lock flash after writing
 }

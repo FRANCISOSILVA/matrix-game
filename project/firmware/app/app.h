@@ -14,6 +14,18 @@
 
 #include "max7219.h"
 
+#define APP_LCD_TITLE            "GWF Schnupperlehre"
+#define APP_LCD_TITLE_SEPARATION "-----------------"
+
+#define APP_LCD_ROW_TITLE            0
+#define APP_LCD_ROW_TITLE_SEPARATION 10
+#define APP_LCD_ROW_GAME_NAME        25
+#define APP_LCD_ROW_GAME_DYNAMIC_0   39
+#define APP_LCD_ROW_GAME_DYNAMIC_1   53
+
+#define BEEP_SHORT_MS 75
+#define BEEP_LONG_MS  750
+
 typedef enum button {
     BUTTON_UP,
     BUTTON_DOWN,
@@ -29,9 +41,7 @@ extern max7219_t max7219;
 void     app(void);
 void     app_beep(uint16_t duration_ms);
 button_t app_get_user_input(void);
-void     app_flash_init_highscore();
-uint16_t app_flash_load_highscore();
-void     app_flash_save_highscore(uint16_t score);
 void     app_matrix_clean(bool matrix[MAX7219_COLUMN_AMOUNT][MAX7219_ROW_AMOUNT]);
+void     app_lcd_print_title(void);
 
 #endif /* APP_H_ */
