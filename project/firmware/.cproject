@@ -45,6 +45,7 @@
 									<listOptionValue builtIn="false" value="../lcd"/>
 									<listOptionValue builtIn="false" value="../max7219"/>
 									<listOptionValue builtIn="false" value="../snake"/>
+									<listOptionValue builtIn="false" value="../tictactoe"/>
 									<listOptionValue builtIn="false" value="../Core/Inc"/>
 									<listOptionValue builtIn="false" value="../Drivers/STM32F0xx_HAL_Driver/Inc"/>
 									<listOptionValue builtIn="false" value="../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy"/>
@@ -82,6 +83,7 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="lcd"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="max7219"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="snake"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tictactoe"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -127,6 +129,7 @@
 									<listOptionValue builtIn="false" value="../lcd"/>
 									<listOptionValue builtIn="false" value="../max7219"/>
 									<listOptionValue builtIn="false" value="../snake"/>
+									<listOptionValue builtIn="false" value="../tictactoe"/>
 									<listOptionValue builtIn="false" value="../Core/Inc"/>
 									<listOptionValue builtIn="false" value="../Drivers/STM32F0xx_HAL_Driver/Inc"/>
 									<listOptionValue builtIn="false" value="../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy"/>
@@ -164,6 +167,7 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="lcd"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="max7219"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="snake"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="tictactoe"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
