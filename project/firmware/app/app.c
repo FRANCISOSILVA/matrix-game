@@ -20,12 +20,30 @@
 
 #define BUTTON_DEBOUNCE_DELAY_MS 10
 
-typedef enum {
-    SNAKE,
-    TICTACTOE,
-} game_t;
+#define GAME_OPTIONS_PER_SCREEN 3
 
 extern SPI_HandleTypeDef hspi1;
+
+typedef enum {
+    SNAKE     = 0,
+    TICTACTOE = 1,
+    GAME_AMOUNT, // Keep at end!
+} game_id_t;
+
+typedef struct {
+    game_id_t   id;
+    const char* name;
+    void (*run)(void);
+} game_t;
+
+/* clang-format off */
+
+static game_t games[] = {
+    [SNAKE]     = { .id = SNAKE,     .name = "Snake",     .run = snake     },
+    [TICTACTOE] = { .id = TICTACTOE, .name = "TicTacToe", .run = tictactoe },
+};
+
+/* clang-format on */
 
 bool      matrix[MAX7219_COLUMN_AMOUNT][MAX7219_ROW_AMOUNT] = { false };
 max7219_t max7219                                           = { 0 };
@@ -103,77 +121,78 @@ void app_lcd_print_title(void)
     SSD1306_UpdateScreen();
 }
 
-static void lcd_print_games(void)
+static void lcd_print_game_selection(game_id_t game_id)
 {
+    // Clear all game options
     SSD1306_GotoXY(0, APP_LCD_ROW_GAME_NAME);
-    SSD1306_Puts("  Snake", &Font_7x10, 1);
+    SSD1306_Puts(APP_LCD_EMPTY_LINE, &Font_7x10, 1);
     SSD1306_GotoXY(0, APP_LCD_ROW_GAME_DYNAMIC_0);
-    SSD1306_Puts("  TicTacToe", &Font_7x10, 1);
-    SSD1306_UpdateScreen();
-}
+    SSD1306_Puts(APP_LCD_EMPTY_LINE, &Font_7x10, 1);
+    SSD1306_GotoXY(0, APP_LCD_ROW_GAME_DYNAMIC_1);
+    SSD1306_Puts(APP_LCD_EMPTY_LINE, &Font_7x10, 1);
 
-static void lcd_print_game_selection(game_t game)
-{
-    // Clear all selection arrows
-    SSD1306_GotoXY(0, APP_LCD_ROW_GAME_NAME);
-    SSD1306_Puts(" ", &Font_7x10, 1);
-    SSD1306_GotoXY(0, APP_LCD_ROW_GAME_DYNAMIC_0);
-    SSD1306_Puts(" ", &Font_7x10, 1);
+    game_id_t start_id = 0;
 
-    switch (game) {
-    case SNAKE:
-        SSD1306_GotoXY(0, APP_LCD_ROW_GAME_NAME);
-        SSD1306_Puts(">", &Font_7x10, 1);
-        break;
+    if (game_id >= GAME_OPTIONS_PER_SCREEN) {
+        start_id = game_id - (GAME_OPTIONS_PER_SCREEN - 1);
+    }
 
-    case TICTACTOE:
-        SSD1306_GotoXY(0, APP_LCD_ROW_GAME_DYNAMIC_0);
-        SSD1306_Puts(">", &Font_7x10, 1);
-        break;
+    for (uint8_t i = 0; i < GAME_OPTIONS_PER_SCREEN; i++) {
+        if ((start_id + i) >= GAME_AMOUNT) {
+            break;
+        }
 
-    default:
-        break; // Not reachable
+        if ((start_id + i) == game_id) {
+            SSD1306_GotoXY(0, APP_LCD_ROW_GAME_NAME + (i * APP_LCD_ROW_GAME_DIFFERENCE));
+            SSD1306_Puts(">", &Font_7x10, 1);
+        }
+
+        SSD1306_GotoXY(APP_LCD_COL_GAME_SELECTION_INDENTATION, APP_LCD_ROW_GAME_NAME + (i * APP_LCD_ROW_GAME_DIFFERENCE));
+        SSD1306_Puts(games[start_id + i].name, &Font_7x10, 1);
     }
 
     SSD1306_UpdateScreen();
 }
 
-static game_t select_game(void)
+static game_id_t select_game(void)
 {
-    button_t button = BUTTON_NONE;
-    game_t   game   = SNAKE;
+    button_t  button  = BUTTON_NONE;
+    game_id_t game_id = SNAKE;
 
     app_lcd_print_title();
 
-    lcd_print_games();
-    lcd_print_game_selection(game);
+    lcd_print_game_selection(game_id);
 
     do {
         do {
             button = app_get_user_input();
         } while (button == BUTTON_NONE);
 
-        if (button == BUTTON_UP) {
-            game = SNAKE;
-            lcd_print_game_selection(game);
+        if (button == BUTTON_DOWN) {
+            if (game_id < (GAME_AMOUNT - 1)) {
+                ++game_id;
+            }
+
+            lcd_print_game_selection(game_id);
         }
 
-        if (button == BUTTON_DOWN) {
-            game = TICTACTOE;
-            lcd_print_game_selection(game);
+        if (button == BUTTON_UP) {
+            if (game_id > 0) {
+                --game_id;
+            }
+
+            lcd_print_game_selection(game_id);
         }
     } while (button != BUTTON_CENTER);
 
-    return game;
+    return game_id;
 }
 
 void app(void)
 {
-    max7219_error_t error_code = MAX7219_OK;
+    game_id_t game_id;
 
-    error_code = max7219_init(&max7219, &hspi1, MAX_SPI_CS_GPIO_Port, MAX_SPI_CS_Pin);
-
-    if (error_code != MAX7219_OK) {
+    if (max7219_init(&max7219, &hspi1, MAX_SPI_CS_GPIO_Port, MAX_SPI_CS_Pin) != MAX7219_OK) {
         for (;;) {
         } // Error handling...
     }
@@ -182,19 +201,16 @@ void app(void)
 
     for (;;) {
         app_matrix_clean(matrix);
-        max7219_set_matrix(&max7219, matrix);
 
-        switch (select_game()) {
-        case SNAKE:
-            snake();
-            break;
+        if (max7219_set_matrix(&max7219, matrix) != MAX7219_OK) {
+            for (;;) {
+            } // Error handling...
+        }
 
-        case TICTACTOE:
-            tictactoe();
-            break;
+        game_id = select_game();
 
-        default:
-            break; // Not reachable
+        if (games[game_id].run != NULL) {
+            games[game_id].run();
         }
     }
 }

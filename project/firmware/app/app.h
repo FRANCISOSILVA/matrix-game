@@ -16,12 +16,17 @@
 
 #define APP_LCD_TITLE            "GWF Schnupperlehre"
 #define APP_LCD_TITLE_SEPARATION "-----------------"
+#define APP_LCD_EMPTY_LINE       "                 "
 
-#define APP_LCD_ROW_TITLE            0
-#define APP_LCD_ROW_TITLE_SEPARATION 10
-#define APP_LCD_ROW_GAME_NAME        25
-#define APP_LCD_ROW_GAME_DYNAMIC_0   39
-#define APP_LCD_ROW_GAME_DYNAMIC_1   53
+#define APP_LCD_ROW_GAME_DIFFERENCE 14 // Difference between game rows [px]
+
+#define APP_LCD_ROW_TITLE            0  // [px]
+#define APP_LCD_ROW_TITLE_SEPARATION 10 // [px]
+#define APP_LCD_ROW_GAME_NAME        25 // [px]
+#define APP_LCD_ROW_GAME_DYNAMIC_0   (APP_LCD_ROW_GAME_NAME + APP_LCD_ROW_GAME_DIFFERENCE)
+#define APP_LCD_ROW_GAME_DYNAMIC_1   (APP_LCD_ROW_GAME_NAME + 2 * APP_LCD_ROW_GAME_DIFFERENCE)
+
+#define APP_LCD_COL_GAME_SELECTION_INDENTATION 14
 
 #define BEEP_SHORT_MS 75
 #define BEEP_LONG_MS  750
