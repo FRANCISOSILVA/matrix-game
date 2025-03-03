@@ -131,9 +131,15 @@ static void lcd_print_game_selection(game_id_t game_id)
     SSD1306_GotoXY(0, APP_LCD_ROW_GAME_DYNAMIC_1);
     SSD1306_Puts(APP_LCD_EMPTY_LINE, &Font_7x10, 1);
 
-    game_id_t start_id = 0;
+    game_id_t        start_id          = 0;
+    static game_id_t start_id_previous = 0;
 
-    if (game_id >= GAME_OPTIONS_PER_SCREEN) {
+    // Check if currently selected game is still displayable with the previous start ID
+    if ((start_id_previous <= game_id) && (game_id < (start_id_previous + GAME_OPTIONS_PER_SCREEN))) {
+        start_id = start_id_previous;
+    } else if (game_id < start_id_previous) {
+        start_id = game_id;
+    } else if (game_id >= (start_id_previous + GAME_OPTIONS_PER_SCREEN)) {
         start_id = game_id - (GAME_OPTIONS_PER_SCREEN - 1);
     }
 
@@ -152,6 +158,8 @@ static void lcd_print_game_selection(game_id_t game_id)
     }
 
     SSD1306_UpdateScreen();
+
+    start_id_previous = start_id;
 }
 
 static game_id_t select_game(void)
