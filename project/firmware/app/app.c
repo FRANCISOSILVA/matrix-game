@@ -14,52 +14,21 @@
 
 #include "main.h"
 #include "max7219.h"
+#include "tictactoe.h"
 #include "snake.h"
 #include "ssd1306.h"
 
-#define BEEP_SHORT_MS 75
-#define BEEP_LONG_MS  750
-
 #define BUTTON_DEBOUNCE_DELAY_MS 10
 
-#define FLASH_HIGHSCORE_ADDRESS 0x08007F00 // Last page
+typedef enum {
+    SNAKE,
+    TICTACTOE,
+} game_t;
 
 extern SPI_HandleTypeDef hspi1;
 
 bool      matrix[MAX7219_COLUMN_AMOUNT][MAX7219_ROW_AMOUNT] = { false };
 max7219_t max7219                                           = { 0 };
-
-/**
- * @brief Initialize the highscore in flash memory, if not yet done
- */
-void app_flash_init_highscore()
-{
-    if (app_flash_load_highscore() == 0xFFFF) {
-        app_flash_save_highscore(0);
-    }
-}
-
-uint16_t app_flash_load_highscore()
-{
-    return *((uint16_t*)FLASH_HIGHSCORE_ADDRESS); // Read stored value
-}
-
-void app_flash_save_highscore(uint16_t score)
-{
-    HAL_FLASH_Unlock(); // Unlock flash for writing
-
-    FLASH_EraseInitTypeDef EraseInitStruct;
-    uint32_t               PageError = 0;
-
-    EraseInitStruct.TypeErase   = FLASH_TYPEERASE_PAGES;
-    EraseInitStruct.PageAddress = FLASH_HIGHSCORE_ADDRESS;
-    EraseInitStruct.NbPages     = 1;
-    HAL_FLASHEx_Erase(&EraseInitStruct, &PageError); // Erase before writing
-
-    HAL_FLASH_Program(FLASH_TYPEPROGRAM_HALFWORD, FLASH_HIGHSCORE_ADDRESS, score);
-
-    HAL_FLASH_Lock(); // Lock flash after writing
-}
 
 void app_matrix_clean(bool matrix[MAX7219_COLUMN_AMOUNT][MAX7219_ROW_AMOUNT])
 {
@@ -124,12 +93,83 @@ void app_beep(uint16_t duration_ms)
     HAL_GPIO_WritePin(BUZZER_GPIO_Port, BUZZER_Pin, GPIO_PIN_RESET);
 }
 
+void app_lcd_print_title(void)
+{
+    SSD1306_Clear();
+    SSD1306_GotoXY(0, APP_LCD_ROW_TITLE);
+    SSD1306_Puts(APP_LCD_TITLE, &Font_7x10, 1);
+    SSD1306_GotoXY(0, APP_LCD_ROW_TITLE_SEPARATION);
+    SSD1306_Puts(APP_LCD_TITLE_SEPARATION, &Font_7x10, 1);
+    SSD1306_UpdateScreen();
+}
+
+static void lcd_print_games(void)
+{
+    SSD1306_GotoXY(0, APP_LCD_ROW_GAME_NAME);
+    SSD1306_Puts("  Snake", &Font_7x10, 1);
+    SSD1306_GotoXY(0, APP_LCD_ROW_GAME_DYNAMIC_0);
+    SSD1306_Puts("  TicTacToe", &Font_7x10, 1);
+    SSD1306_UpdateScreen();
+}
+
+static void lcd_print_game_selection(game_t game)
+{
+    // Clear all selection arrows
+    SSD1306_GotoXY(0, APP_LCD_ROW_GAME_NAME);
+    SSD1306_Puts(" ", &Font_7x10, 1);
+    SSD1306_GotoXY(0, APP_LCD_ROW_GAME_DYNAMIC_0);
+    SSD1306_Puts(" ", &Font_7x10, 1);
+
+    switch (game) {
+    case SNAKE:
+        SSD1306_GotoXY(0, APP_LCD_ROW_GAME_NAME);
+        SSD1306_Puts(">", &Font_7x10, 1);
+        break;
+
+    case TICTACTOE:
+        SSD1306_GotoXY(0, APP_LCD_ROW_GAME_DYNAMIC_0);
+        SSD1306_Puts(">", &Font_7x10, 1);
+        break;
+
+    default:
+        break; // Not reachable
+    }
+
+    SSD1306_UpdateScreen();
+}
+
+static game_t select_game(void)
+{
+    button_t button = BUTTON_NONE;
+    game_t   game   = SNAKE;
+
+    app_lcd_print_title();
+
+    lcd_print_games();
+    lcd_print_game_selection(game);
+
+    do {
+        do {
+            button = app_get_user_input();
+        } while (button == BUTTON_NONE);
+
+        if (button == BUTTON_UP) {
+            game = SNAKE;
+            lcd_print_game_selection(game);
+        }
+
+        if (button == BUTTON_DOWN) {
+            game = TICTACTOE;
+            lcd_print_game_selection(game);
+        }
+    } while (button != BUTTON_CENTER);
+
+    return game;
+}
+
 void app(void)
 {
     max7219_error_t error_code = MAX7219_OK;
-    button_t        button     = BUTTON_NONE;
-    button_t        direction  = BUTTON_RIGHT;
-    move_t          move_state = MOVE_NORMAL;
 
     error_code = max7219_init(&max7219, &hspi1, MAX_SPI_CS_GPIO_Port, MAX_SPI_CS_Pin);
 
@@ -138,47 +178,23 @@ void app(void)
         } // Error handling...
     }
 
-    app_flash_init_highscore();
-
     SSD1306_Init();
-    snake_lcd_start();
-
-    snake_init();
 
     for (;;) {
-        while (app_get_user_input() == BUTTON_NONE) {
-            // Wait for user to start the game
+        app_matrix_clean(matrix);
+        max7219_set_matrix(&max7219, matrix);
+
+        switch (select_game()) {
+        case SNAKE:
+            snake();
+            break;
+
+        case TICTACTOE:
+            tictactoe();
+            break;
+
+        default:
+            break; // Not reachable
         }
-
-        srand(HAL_GetTick());
-        snake_lcd_start();
-        snake_start_game(&direction);
-
-        do {
-            app_beep(BEEP_SHORT_MS);
-            snake_food_generate();
-
-            do {
-                for (uint8_t i = 0; i < SNAKE_SEQUENCE_PERIOD_10MS; i++) {
-                    button = app_get_user_input(); // Takes 10 ms
-
-                    if ((button != BUTTON_NONE) && (button != BUTTON_CENTER)) {
-                        direction = button;
-                    }
-                }
-
-                move_state = snake_move(direction);
-
-                snake_convert_to_matrix(matrix);
-
-                if (max7219_set_matrix(&max7219, matrix) != MAX7219_OK) {
-                    for (;;) {
-                    } // Error handling...
-                }
-            } while (move_state == MOVE_NORMAL);
-        } while (move_state != MOVE_GAME_OVER);
-
-        app_beep(BEEP_LONG_MS);
-        snake_handle_score();
     }
 }
