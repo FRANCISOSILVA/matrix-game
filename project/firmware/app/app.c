@@ -164,8 +164,8 @@ static void lcd_print_game_selection(game_id_t game_id)
 
 static game_id_t select_game(void)
 {
-    button_t  button  = BUTTON_NONE;
-    game_id_t game_id = SNAKE;
+    button_t         button  = BUTTON_NONE;
+    static game_id_t game_id = SNAKE;
 
     app_lcd_print_title();
 
