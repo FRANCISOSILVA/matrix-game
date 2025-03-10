@@ -8,4 +8,4 @@ The firmware currently supports the following games:
 - [x] Snake
 - [x] Tic-Tac-Toe
 
-Feel free to submit a PR to add more games! :tada:
+Feel free to submit a Pull Request to add more games! :tada:
