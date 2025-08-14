@@ -18,6 +18,7 @@
 #include "snake.h"
 #include "drawing.h"
 #include "bombdodging.h"
+#include "breakout.h"
 #include "ssd1306.h"
 
 #define BUTTON_DEBOUNCE_DELAY_MS 10
@@ -31,6 +32,7 @@ typedef enum {
     TICTACTOE   = 1,
     DRAWING     = 2,
 	BOMBDODGING = 3,
+	BREAKOUT	= 4,
     GAME_AMOUNT, // Keep at end!
 } game_id_t;
 
@@ -47,6 +49,7 @@ static game_t games[] = {
     [TICTACTOE]   = { .id = TICTACTOE,   .name = "TicTacToe",   .run = tictactoe   },
 	[DRAWING] 	  = { .id = DRAWING,     .name = "Drawing",     .run = drawing     },
 	[BOMBDODGING] = { .id = BOMBDODGING, .name = "BombDodging", .run = bombdodging },
+	[BREAKOUT] 	  = { .id = BREAKOUT,    .name = "Breakout",    .run = breakout    },
 };
 
 /* clang-format on */
