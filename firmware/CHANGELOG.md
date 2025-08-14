@@ -1,5 +1,11 @@
 # Matrix-Game Firmware Changelog
 
+## [v1.3] -- 2025-08-14
+============================
+
+### Added:
+    - [games] added drawing game
+
 ## [v1.2] -- 2025-03-04
 ============================
 

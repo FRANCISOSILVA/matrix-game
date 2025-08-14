@@ -16,6 +16,7 @@
 #include "max7219.h"
 #include "tictactoe.h"
 #include "snake.h"
+#include "drawing.h"
 #include "ssd1306.h"
 
 #define BUTTON_DEBOUNCE_DELAY_MS 10
@@ -27,6 +28,7 @@ extern SPI_HandleTypeDef hspi1;
 typedef enum {
     SNAKE     = 0,
     TICTACTOE = 1,
+    DRAWING   = 2,
     GAME_AMOUNT, // Keep at end!
 } game_id_t;
 
@@ -41,6 +43,7 @@ typedef struct {
 static game_t games[] = {
     [SNAKE]     = { .id = SNAKE,     .name = "Snake",     .run = snake     },
     [TICTACTOE] = { .id = TICTACTOE, .name = "TicTacToe", .run = tictactoe },
+	[DRAWING] 	= { .id = DRAWING,   .name = "Drawing",   .run = drawing   },
 };
 
 /* clang-format on */
