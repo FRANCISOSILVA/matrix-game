@@ -1,5 +1,11 @@
 # Matrix-Game Firmware Changelog
 
+## [v1.4] -- 2025-08-14
+============================
+
+### Added:
+    - [games] added BombDodging game
+
 ## [v1.3] -- 2025-08-14
 ============================
 
